@@ -1,0 +1,182 @@
+<html>
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>WORKDAY</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="WORKDAY">
+  <param name="Keyword" value="函数">
+</object>
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/Ribbon/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/Ribbon/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<section class="ocpArticleTitleSection" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+<h1><font size="3">WORKDAY.INTL</font></h1>
+</section><article id="ocpArticleContent" class="ocpArticleContent" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><section class="ocpIntroduction">
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+本文介绍<span class="Apple-converted-space">&nbsp;</span><b class="ocpLegacyBold">WORKDAY.INTL</b><span class="Apple-converted-space">&nbsp;</span>函数的公式语法和用法。</p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+返回指定的若干个工作日之前或之后的日期的序列号（使用自定义周末参数）。 周末参数指明周末有几天以及是哪几天。 周末和任何指定为假期的日期不被视为工作日。</p>
+</section><section class="ocpSection">
+<h2><font size="2">语法</font></h2>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+WORKDAY.INTL(start_date, days, [weekend], [holidays])</p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+WORKDAY.INTL 函数语法具有下列参数：</p>
+<ul xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<li><b class="ocpRunInHead">Start_date</b>&nbsp;&nbsp;&nbsp;&nbsp;必需。 开始日期（将被截尾取整）。</li>
+	<li><b class="ocpRunInHead">Days</b>&nbsp;&nbsp;&nbsp;&nbsp;必需。 Start_date 之前或之后的工作日的天数。 
+	正值表示未来日期；负值表示过去日期；零值表示开始日期。 Day-offset 将被截尾取整。</li>
+	<li><b class="ocpRunInHead">weekend</b>&nbsp;&nbsp;&nbsp;&nbsp;可选。 指示一周中属于周末的日子和不作为工作日的日子。 
+	Weekend 是一个用于指定周末日的周末数字或字符串。<p>weekend 数值表示以下周末日：</li>
+</ul>
+<table id="tblID0EDBDAAA" class="banded" xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<thead>
+		<tr>
+			<th><b class="ocpLegacyBold">周末数字</b></th>
+			<th><b class="ocpLegacyBold">周末日</b></th>
+		</tr>
+	</thead>
+	<tr>
+		<td>1 或省略</td>
+		<td>星期六、星期日</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>星期日、星期一</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>星期一、星期二</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>星期二、星期三</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>星期三、星期四</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>星期四、星期五</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>星期五、星期六</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>仅星期日</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>仅星期一</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>仅星期二</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>仅星期三</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>仅星期四</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>仅星期五</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>仅星期六</td>
+	</tr>
+</table>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+周末字符串值的长度为七个字符，并且字符串中的每个字符表示一周中的一天（从星期一开始）。<b class="ocpLiteral">1</b><span class="Apple-converted-space">&nbsp;</span>表示非工作日，<b class="ocpLiteral">0</b><span class="Apple-converted-space">&nbsp;</span>表示工作日。在字符串中仅允许使用字符<span class="Apple-converted-space">&nbsp;</span><b class="ocpLiteral">1</b><span class="Apple-converted-space">&nbsp;</span>和<span class="Apple-converted-space">&nbsp;</span><b class="ocpLiteral">0</b>。<b class="ocpLiteral">1111111</b><span class="Apple-converted-space">&nbsp;</span>是无效字符串。</p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<b>例如</b>，<b class="ocpLiteral">0000011</b><span class="Apple-converted-space">&nbsp;</span>结果为星期六和星期日是周末。</p>
+<ul xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<li><b class="ocpRunInHead">holidays</b>&nbsp;可选。 一组可选的日期，表示要从工作日日历中排除的一个或多个日期。 
+	holidays 应是一个包含相关日期的单元格区域，或者是一个由表示这些日期的序列值构成的数组常量。 holidays 
+	中的日期或序列值的顺序可以是任意的。</li>
+</ul>
+</section><section class="ocpSection">
+<h2><font size="2">备注</font></h2>
+<ul xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<li>如果 start_date 超出了当前日期基值的范围，则函数 WORKDAY.INTL 将返回 错误值 #NUM!。</li>
+	<li>如果 holidays 中的任何日期超出了当前日期基值的范围，则函数 WORKDAY.INTL 将返回 错误值 #NUM!。</li>
+	<li>如果 start_date 加上 day-offset 得到一个无效日期，则函数 WORKDAY.INTL 将返回 错误值 #NUM!。</li>
+	<li>如果 weekend 字符串的长度无效或包含无效字符，则函数 WORKDAY.INTL 将返回 错误值 #VALUE!。</li>
+</ul>
+</section><section class="ocpSection">
+<h2><font size="2">示例</font></h2>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+复制下表中的示例数据，然后将其粘贴进新的 <b>Et</b> 工作表的 A1 单元格中。要使公式显示结果，请选中它们，按 F2，然后按 
+Enter。如果需要，可调整列宽以查看所有数据。</p>
+<table id="tblID0EABBAAA" class="banded" xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<thead>
+		<tr>
+			<th align="left"><b class="ocpLegacyBold">公式</b></th>
+			<th align="left"><b class="ocpLegacyBold">说明</b></th>
+			<th width="88" align="left"><b class="ocpLegacyBold">实时结果</b></th>
+		</tr>
+	</thead>
+	<tr>
+		<td height="20">=WORKDAY.INTL(DATE(2012,1,1),30,0)</td>
+		<td height="20">使用 0 作为周末参数将导致一个 错误 #NUM!。</td>
+		<td width="88" height="20">#NUM!</td>
+	</tr>
+	<tr>
+		<td>=WORKDAY.INTL(DATE(2012,1,1),90,11)</td>
+		<td>查找据 2010-1-1 90 个工作日的日期，仅将星期天作为周末进行计数（周末参数为 11）。</td>
+		<td width="88">41013</td>
+	</tr>
+	<tr>
+		<td>=TEXT(WORKDAY.INTL(DATE(2012,1,1),30,17),&quot;m/dd/yyyy&quot;)</td>
+		<td>使用 TEXT 函数将得到的序列数 (40944) 设置为 &quot;m/dd/yyyy&quot; 格式。 查找据 2010-1-1 30 
+		个工作日的日期，仅将星期六作为周末进行计数（周末参数为 17）。</td>
+		<td width="88">2012-2-05</td>
+	</tr>
+</table>
+</section></article>
+<p><b>相关功能</b></p>
+<p><a href="functionlist_datetime.htm">日期与时间函数</a></p>
+
+
+
+<p>　</p>
+</body>
+
+</html>

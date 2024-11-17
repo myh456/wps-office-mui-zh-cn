@@ -1,0 +1,209 @@
+<html>
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>ACCRINTM</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="ACCRINTM">
+  <param name="Keyword" value="函数">
+</object>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/Ribbon/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/Ribbon/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<h1>ACCRINT</h1><section class="ocpIntroduction" style="background-color: transparent; color: rgb(0, 0, 0); font-family: Times New Roman; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">
+<p xmlns:antixss="urn:AntiXSSExtensions">本文介绍 WPS 中 <b class="ocpLegacyBold">
+ACCRINT</b> 函数的公式语法和用法。</p>
+  </section><section class="ocpSection" style="background-color: transparent; color: rgb(0, 0, 0); font-family: Times New Roman; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">
+    <h2>说明</h2>
+<p xmlns:antixss="urn:AntiXSSExtensions">返回定期付息证券的应计利息。</p>
+  </section><section class="ocpSection" style="background-color: transparent; color: rgb(0, 0, 0); font-family: Times New Roman; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">
+    <h2>语法</h2>
+<p xmlns:antixss="urn:AntiXSSExtensions">ACCRINT(issue, first_interest, 
+settlement, rate, par, frequency, [basis], [calc_method])</p>
+<div class="ocpAlert" xmlns:antixss="urn:AntiXSSExtensions">
+	<p class="ocpAlertSection"><b class="ocpNote">重要:</b>&nbsp;应使用 DATE 
+	函数输入日期，或者将日期作为其他公式或函数的结果输入。 例如，使用函数 DATE(2008,5,23) 输入 2008 年 5 月 23 日。 
+	如果日期以文本形式输入，则会出现问题。</div>
+<p xmlns:antixss="urn:AntiXSSExtensions">ACCRINT 函数语法具有下列参数：</p>
+<ul xmlns:antixss="urn:AntiXSSExtensions">
+	<li><b class="ocpRunInHead">Issue</b>&nbsp;&nbsp;&nbsp;&nbsp;必需。 有价证券的发行日。</li>
+	<li><b class="ocpRunInHead">First_interest</b>&nbsp;&nbsp;&nbsp;&nbsp;必需。 有价证券的首次计息日。</li>
+	<li><b class="ocpRunInHead">Settlement</b>&nbsp;&nbsp;&nbsp;&nbsp;必需。 有价证券的结算日。 
+	有价证券结算日是在发行日之后，有价证券卖给购买者的日期。</li>
+	<li><b class="ocpRunInHead">Rate</b>&nbsp;&nbsp;&nbsp;&nbsp;必需。 有价证券的年息票利率。</li>
+	<li><b class="ocpRunInHead">Par</b>&nbsp;&nbsp;&nbsp;&nbsp;必需。 证券的票面值。 如果省略此参数，则 ACCRINT 使用 
+	￥10,000。</li>
+	<li><b class="ocpRunInHead">Frequency</b>&nbsp;&nbsp;&nbsp;&nbsp;必需。 年付息次数。 如果按年支付，frequency = 
+	1；按半年期支付，frequency = 2；按季支付，frequency = 4。</li>
+	<li><b class="ocpRunInHead">Basis</b>&nbsp;&nbsp;&nbsp;&nbsp;可选。 要使用的日计数基准类型。</li>
+</ul>
+<table class="banded" id="tblID0EBBDAAA" xmlns:antixss="urn:AntiXSSExtensions">
+	<thead>
+		<tr>
+			<td><b class="ocpLegacyBold">Basis</b> </td>
+			<td><b class="ocpLegacyBold">日计数基准</b> </td>
+		</tr>
+	</thead>
+	<tr>
+		<td>0 或省略</td>
+		<td>US (NASD) 30/360</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>实际/实际</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>实际/360</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>实际/365</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>欧洲 30/360</td>
+	</tr>
+</table>
+<ul xmlns:antixss="urn:AntiXSSExtensions">
+	<li><b class="ocpRunInHead">calc_method</b>&nbsp;&nbsp;&nbsp;&nbsp;可选。 
+	一个逻辑值，指定当结算日期晚于首次计息日期时用于计算总应计利息的方法。 如果值为 TRUE (1)，则返回从发行日到结算日的总应计利息。 如果值为 
+	FALSE (0)，则返回从首次计息日到结算日的应计利息。 如果不输入此参数，则默认为 TRUE。</li>
+</ul>
+  </section><section class="ocpSection" style="background-color: transparent; color: rgb(0, 0, 0); font-family: Times New Roman; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">
+    <h2>备注</h2>
+<ul xmlns:antixss="urn:AntiXSSExtensions">
+	<li>WPS 可将日期存储为可用于计算的序列号。默认情况下，1900 年 1 月 1 日的序列号是 1，而 2008 年 1 月 1 日的序列号是 
+	39448，这是因为它距 1900 年 1 月 1 日有 39448 天。</li>
+	<li>issue、first_interest、settlement、frequency 和 basis 将被截尾取整。</li>
+	<li>如果 issue、first_interest 或 settlement 不是有效日期，则 ACCRINT 将返回 #VALUE! 错误值。</li>
+	<li>如果 rate ≤ 0 或 par ≤ 0，则 ACCRINT 将返回 #NUM! 错误值。</li>
+	<li>如果 frequency 不是数字 1、2 或 4，则 ACCRINT 将返回 #NUM! 错误值。</li>
+	<li>如果 basis &lt; 0 或 basis &gt; 4，则 ACCRINT 将返回 #NUM! 错误值。</li>
+	<li>如果 issue ≥ settlement，则 ACCRINT 将返回 #NUM! 错误值。</li>
+	<li>函数 ACCRINT 的计算公式如下：<p>
+	<img alt="公式" src="../../../images/公式1.jpg" width="265" height="51"></p>
+	<p>其中：<ul>
+		<li>Ai = 奇数期内第 i 个准票息期的应计天数。</li>
+		<li>NC = 奇数期内的准票息期期数。 如果该数含有小数位，则向上进位至最接近的整数。</li>
+		<li>NLi = 奇数期内准票息期的正常天数。</li>
+	</ul>
+	</li>
+</ul>
+</section>
+<p>　</p>
+<div border="0">
+	<p><b>示例 </b>
+	<p>
+	<span style="display: inline !important; float: none; color: rgb(0, 0, 0); font-family: Times New Roman; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+	复制下表中的示例数据，然后将其粘贴进新的 WPS 工作表的 A1 单元格中。要使公式显示结果，请选中它们，按 F2，然后按 
+	Enter。如果需要，可调整列宽以查看所有数据。</span><p>　</div>
+
+<table width="561">
+	<tr>
+		<th class="thEmpty" width="20"></th>
+	    <th class="th1" width="204">A</th>
+	    <th class="th1" width="323">B</th>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="20"><b>1</b></td>
+		<td class = "th1" width="204">数据</td>
+		<td class = "th1" width="323">说明</td>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="20">2</td>
+		<td class="ll" width="204">39508</td>
+		<td class="ll" width="323">发行日</td>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="20">3</td>
+		<td class="ll" height="20" width="204">39691</td>
+		<td class="ll" height="20" width="323">首次计息日</td>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="20">4</td>
+		<td class="ll" height="18" width="204">39569</td>
+		<td class="ll" height="18" width="323">结算日</td>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="20">5</td>
+		<td class="ll" height="18" width="204">0.1</td>
+		<td class="ll" height="18" width="323">票息率</td>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="20">6</td>
+		<td class="ll" height="18" width="204">1000</td>
+		<td class="ll" height="18" width="323">票面值</td>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="20">7</td>
+		<td class="ll" height="18" width="204">2</td>
+		<td class="ll" height="18" width="323">按半年期支付（请参见上面的信息）</td>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="20">8</td>
+		<td class="ll" height="18" width="204">0</td>
+		<td class="ll" height="18" width="323">以 30/360 为日计数基准（请参见上面的信息）</td>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="20">9</td>
+		<td class = "th1" width="204">公式</td>
+		<td class = "th1" width="323">说明（结果）</td>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="20">　</td>
+		<td class="ll" width="204">=ACCRINT(A2,A3,A4,A5,A6,A7,A8)</td>
+		<td class="ll" width="323">满足上述条件的国债应计利息(16.666667)</td>
+	</tr>
+		
+	<tr>
+		<td class="tdSeqence" width="20">　</td>
+		<td class="ll" width="204">
+		=ACCRINT(DATE(2008,3,5),A3,A4,A5,A6,A7,A8,FALSE)</td>
+		<td class="ll" width="323">满足上述条件（除发行日为 2008 年 3 月 5 
+		日之外）的应计利息(15.555556)</td>
+	</tr>
+		
+	<tr>
+		<td class="tdSeqence" width="20">10</td>
+		<td class="ll" width="204">=ACCRINT(DATE(2008, 4, 5), A3, A4, A5, A6, 
+		A7, A8, TRUE)</td>
+		<td class="ll" width="323">满足上述条件（除发行日为 2008 年 4 月 5 
+		日且应计利息从首次计息日计算到结算日之外）的应计利息(7.2222222)</td>
+	</tr>
+		
+</table>
+
+	<p>
+
+<br>
+
+</p>
+<p><b>相关功能</b></p>
+<p><a href="functionlist_fina.htm">财务函数</a></p>
+
+
+
+</body>
+
+</html>

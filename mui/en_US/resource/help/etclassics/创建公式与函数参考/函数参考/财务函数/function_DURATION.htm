@@ -1,0 +1,285 @@
+<html>
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>DURATION</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="YIELD">
+  <param name="Keyword" value="函数">
+</object>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="table3">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<h1>DURATION</h1>
+<p>
+返回 $100 的假定值的 macauley 修正期限持续时间。 &quot;持续时间&quot; 定义为现金流现值的加权平均值，并用作债券价格对收益变更的衡量。</p>
+<p><b>语法</b></p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup" xmlns:hrefappend="urn:HrefExtensions" style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; padding: 0px; background-color: rgb(255, 255, 255)">
+<font size="2">DURATION(settlement, maturity, coupon, yld, frequency, [basis])</font></p>
+<div class="ocpAlert" xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup" xmlns:hrefappend="urn:HrefExtensions" style="box-sizing: border-box; color: rgb(54, 54, 54); font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-top: 16px; margin-bottom: 16px; padding-left: 26.875px; padding-right: 61.4375px; padding-top: 6px; padding-bottom: 6px; background: rgb(243, 243, 243)">
+	<p class="ocpAlertSection" style="font-size: 14px; box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; padding: 0px; font-family: &quot;Segoe UI&quot;, &quot;Segoe UI Web&quot;, wf_segoe-ui_normal, &quot;Helvetica Neue&quot;, &quot;BBAlpha Sans&quot;, &quot;S60 Sans&quot;, Arial, sans-serif;">
+	<b class="ocpNote" style="font-weight: 700; box-sizing: border-box; line-height: 1.5; font-family: 宋体; margin-left: 0px; margin-right: 0px; margin-top: 20px; margin-bottom: 5px">
+	<font size="2">重要:</font></b><font size="2" face="宋体">&nbsp;应使用 DATE 
+	函数输入日期，或者将日期作为其他公式或函数的结果输入。 例如，使用函数 DATE(2018,5,23) 输入 2018 年 5 月 23 日。 
+	如果日期以文本形式输入，则会出现问题。</font></div>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup" xmlns:hrefappend="urn:HrefExtensions" style="box-sizing: border-box; color: rgb(30, 30, 30); font-family: 宋体; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; padding: 0px; background-color: rgb(255, 255, 255); margin-top:0; margin-bottom:0">
+<font size="2">DURATION函数语法具有下列参数：</font></p>
+<ul>
+	<li>
+	<p style="word-spacing:0; text-indent:0">Settlement&nbsp;&nbsp;&nbsp;&nbsp;必需。 有价证券的结算日。 
+	有价证券结算日是在发行日之后，有价证券卖给购买者的日期。</li>
+	<li>
+	<p style="word-spacing:0; text-indent:0">Maturity&nbsp;&nbsp;&nbsp;&nbsp;必需。 有价证券的到期日。 到期日是有价证券有效期截止时的日期。</li>
+	<li>
+	<p style="word-spacing:0; text-indent:0">Coupon&nbsp;&nbsp;&nbsp;&nbsp;必需。 有价证券的年息票利率。</li>
+	<li>
+	<p style="word-spacing:0; text-indent:0">Yld&nbsp;&nbsp;&nbsp;&nbsp;必需。 有价证券的年收益率。</li>
+	<li>
+	<p style="word-spacing:0; text-indent:0">Frequency&nbsp;&nbsp;&nbsp;&nbsp;必需。 年付息次数。 如果按年支付，frequency = 
+	1；按半年期支付，frequency = 2；按季支付，frequency = 4。</li>
+	<li>
+	<p style="word-spacing:0; text-indent:0">Basis&nbsp;&nbsp;&nbsp;&nbsp;可选。 要使用的日计数基准类型。</p>
+	</li>
+</ul>
+<table id="table1" class="banded flipColors" xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup" xmlns:hrefappend="urn:HrefExtensions" style="box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; border-bottom: 1px solid rgb(204, 204, 204); width: 768px; margin-top: 10px; padding: 0px; line-height: normal; border-top: 1px solid rgb(204, 204, 204); color: rgb(54, 54, 54); font-family: &quot;Segoe UI&quot;, &quot;Segoe UI Web Regular&quot;, &quot;Segoe UI Symbol&quot;, &quot;Helvetica Neue&quot;, &quot;BBAlpha Sans&quot;, &quot;S60 Sans&quot;, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+	<thead style="box-sizing: border-box;">
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(218, 218, 218); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); text-transform: none;">
+			<th style="box-sizing: border-box; text-align: left; font-size: 1em; color: rgb(51, 51, 51); text-transform: none; font-weight: normal; border: 0px none; padding-left: 5px; padding-right: 10px; padding-top: 3px; padding-bottom: 3px; background: rgb(218, 218, 218)">
+			<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; font-family: 'Segoe UI Semibold', wf_segoe-ui_semibold, wf_segoe-ui_normal, 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400; padding: 0px">
+			<b class="ocpLegacyBold" style="font-weight: 700; box-sizing: border-box; font-family: 宋体">
+			<font size="2">Basis</font></b></th>
+			<th style="box-sizing: border-box; text-align: left; font-size: 1em; color: rgb(51, 51, 51); text-transform: none; font-weight: normal; border: 0px none; padding-left: 5px; padding-right: 10px; padding-top: 3px; padding-bottom: 3px; background: rgb(218, 218, 218)">
+			<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; font-family: 'Segoe UI Semibold', wf_segoe-ui_semibold, wf_segoe-ui_normal, 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400; padding: 0px">
+			<b class="ocpLegacyBold" style="font-weight: 700; box-sizing: border-box; font-family: 宋体">
+			<font size="2">日计数基准</font></b></th>
+		</tr>
+	</thead>
+	<tbody style="box-sizing: border-box;">
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(244, 244, 244); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">0 或省略</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">US (NASD) 30/360</font></td>
+		</tr>
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(244, 244, 244); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">1</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">实际/实际</font></td>
+		</tr>
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(244, 244, 244); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">2</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">实际/360</font></td>
+		</tr>
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(244, 244, 244); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">3</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">实际/365</font></td>
+		</tr>
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(244, 244, 244); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">4</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">欧洲 30/360</font></td>
+		</tr>
+</table>
+
+<p><b>备注</b> </p>
+
+<div border="0">
+	<div id="m_divBody" name="client-body">
+		<div class="cdclvSection">
+			<div id="m_article" class="cntArticleBody">
+				<div id="m_divBody0" name="client-body">
+					<div class="cdclv15Section">
+						<div id="m_article0" class="cntArticleBody">
+							<ul>
+								<li>
+								<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+								WPS表格<font size="2"> 可将日期存储为可用于计算的序列号。 默认情况下，1900 
+								年 1 月 1 日的序列号是 1，而 2018 年 1 月 1 日的序列号是 
+								43101，这是因为它距 1900 年 1 月 1 日有 43101 天。</font></li>
+								<li>
+								<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 'Segoe UI', 'Segoe UI Web', wf_segoe-ui_normal, 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; padding: 0px">
+								<b class="ocpLegacyBold" style="font-weight: 700; box-sizing: border-box; font-family: 宋体">
+								<font size="2">结算日</font></b><font size="2"><font face="宋体">是买方购买优惠券（如债券）的日期。<span class="Apple-converted-space">&nbsp;</span></font><b class="ocpLegacyBold" style="font-weight: 700; box-sizing: border-box; font-family: 宋体">到期日</b><font face="宋体">是指票息到期的日期。 
+								例如，假设30年的债券在2018年1月1日发布，并且购买者六个月后购买。 
+								签发日期为2018年1月1日，结算日为年 2018 7 
+								月1日，到期2048日为年1月1日，即2018在发行日之后30年。</font></font></li>
+								<li>
+								<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+								<font size="2">Settlement、maturity、frequency 和 
+								basis 将被截尾取整。</font></li>
+								<li>
+								<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+								<font size="2">如果结算或到期日期不是有效日期，则 DURATION 返回 
+								#VALUE！ 。</font></li>
+								<li>
+								<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+								<font size="2">如果优惠券 &lt; 0 或 yld &lt; 0，则 DURATION 返回 
+								#NUM！ 。</font></li>
+								<li>
+								<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+								<font size="2">如果 frequency 是除1、2或4以外的任何数字，则 
+								DURATION 返回 #NUM！ 。</font></li>
+								<li>
+								<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+								<font size="2">如果 basis &lt; 0 或基础 &gt; 4，则 DURATION 
+								返回 #NUM！ 。</font></li>
+								<li>
+								<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+								<font size="2">如果结算≥到期，则 DURATION 将返回 #NUM！ 。</font></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p><b>示例 </b>
+	</div>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup" xmlns:hrefappend="urn:HrefExtensions" style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; padding: 0px; background-color: rgb(255, 255, 255)">
+<font size="2">复制下表中的示例数据，然后将其粘贴进新的 WPS表格 工作表的 A1 单元格中。 要使公式显示结果，请选中它们，按 F2，然后按 
+Enter。 如果需要，可调整列宽以查看所有数据。</font></p>
+<table id="table2" class="banded flipColors" xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup" xmlns:hrefappend="urn:HrefExtensions" style="box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; border-bottom: 1px solid rgb(204, 204, 204); width: 768px; margin-top: 10px; padding: 0px; line-height: normal; border-top: 1px solid rgb(204, 204, 204); color: rgb(54, 54, 54); font-family: &quot;Segoe UI&quot;, &quot;Segoe UI Web Regular&quot;, &quot;Segoe UI Symbol&quot;, &quot;Helvetica Neue&quot;, &quot;BBAlpha Sans&quot;, &quot;S60 Sans&quot;, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+	<thead style="box-sizing: border-box;">
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(218, 218, 218); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); text-transform: none;">
+			<th style="box-sizing: border-box; text-align: left; font-size: 1em; color: rgb(51, 51, 51); text-transform: none; font-weight: normal; border: 0px none; padding-left: 5px; padding-right: 10px; padding-top: 3px; padding-bottom: 3px; background: rgb(218, 218, 218)">
+			<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; font-family: 'Segoe UI Semibold', wf_segoe-ui_semibold, wf_segoe-ui_normal, 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400; padding: 0px">
+			<b class="ocpLegacyBold" style="font-weight: 700; box-sizing: border-box; font-family: 宋体">
+			<font size="2">数据</font></b></th>
+			<th style="box-sizing: border-box; text-align: left; font-size: 1em; color: rgb(51, 51, 51); text-transform: none; font-weight: normal; border: 0px none; padding-left: 5px; padding-right: 10px; padding-top: 3px; padding-bottom: 3px; background: rgb(218, 218, 218)">
+			<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; font-family: 'Segoe UI Semibold', wf_segoe-ui_semibold, wf_segoe-ui_normal, 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400; padding: 0px">
+			<b class="ocpLegacyBold" style="font-weight: 700; box-sizing: border-box; font-family: 宋体">
+			<font size="2">说明</font></b></th>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">　</td>
+		</tr>
+	</thead>
+	<tbody style="box-sizing: border-box;">
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(244, 244, 244); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">07/01/2018</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">结算日</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">　</td>
+		</tr>
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(244, 244, 244); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">01/01/2048</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">到期日</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">　</td>
+		</tr>
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(244, 244, 244); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">8.0%</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">息票利率</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">　</td>
+		</tr>
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(244, 244, 244); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">9.0%</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">收益率</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">　</td>
+		</tr>
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(244, 244, 244); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">2</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">按半年期支付（请参见上面的信息）</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">　</td>
+		</tr>
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(244, 244, 244); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">1</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">以实际天数/实际天数为日计数基准（请参见上面的信息）</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">　</td>
+		</tr>
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(244, 244, 244); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 'Segoe UI', 'Segoe UI Web', wf_segoe-ui_normal, 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; padding: 0px">
+			<b class="ocpLegacyBold" style="font-weight: 700; box-sizing: border-box; font-family: 宋体">
+			<font size="2">公式</font></b></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 'Segoe UI', 'Segoe UI Web', wf_segoe-ui_normal, 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; padding: 0px">
+			<b class="ocpLegacyBold" style="font-weight: 700; box-sizing: border-box; font-family: 宋体">
+			<font size="2">说明</font></b></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 'Segoe UI', 'Segoe UI Web', wf_segoe-ui_normal, 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; padding: 0px">
+			<b class="ocpLegacyBold" style="font-weight: 700; box-sizing: border-box; font-family: 宋体">
+			<font size="2">结果</font></b></td>
+		</tr>
+		<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; background-color: rgb(244, 244, 244); border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204);">
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">=DURATION(A2,A3,A4,A5,A6,A7)</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">在上述条件下有价证券的修正期限</font></td>
+			<td style="box-sizing: border-box; padding: 4px 10px; margin: 0px; vertical-align: top;">
+			<p style="box-sizing: border-box; color: rgb(30, 30, 30); line-height: 1.5; font-family: 宋体; padding: 0px">
+			<font size="2">10.9191453</font></td>
+		</tr>
+</table>
+
+	<p>
+
+<br>
+
+</p>
+<p><b>相关功能</b></p>
+<p><a href="functionlist_fina.htm">财务函数</a></p>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<html>
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>NORMINV</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="NORMINV">
+  <param name="Keyword" value="函数">
+</object>
+<style>
+<!--
+td
+{color:#000000;
+font-size:12.0pt;
+font-family:宋体;
+font-weight:400;
+font-style:normal;
+text-decoration:none;
+text-align:general;
+vertical-align:middle;
+
+}-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<section class="ocpArticleTitleSection" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+<h1>NORM.S.INV </h1>
+</section><article id="ocpArticleContent" class="ocpArticleContent" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><section class="ocpIntroduction">
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+返回标准正态累积分布函数的反函数值。 该分布的平均值为 0，标准偏差为 1。</p>
+</section><section class="ocpSection">
+<h2><font size="2">语法</font></h2>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+NORM.S.INV(probability)</p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+NORM.S.INV 函数语法具有下列参数：</p>
+<ul xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<li><b class="ocpRunInHead">Probability</b>&nbsp;&nbsp;&nbsp;&nbsp;必需。 对应于正态分布的概率。</li>
+</ul>
+</section><section class="ocpSection">
+<h2><font size="2">说明</font></h2>
+<ul xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<li>如果 probability 是非数值的，则 NORMS.INV 返回 错误值 #VALUE!。</li>
+	<li>如果 probability &lt;= 0 或 probability &gt;= 1，则 NORMS.INV 返回 错误值 #NUM!。</li>
+</ul>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+如果已给定概率值，则 NORM.S.INV 使用 NORM.S.DIST(z,TRUE) = probability 求解数值 z。 因此，NORM.S.INV 
+的精度取决于 NORM.S.DIST 的精度。 NORM.S.INV 使用迭代搜索技术。</p>
+</section><section class="ocpSection">
+<h2><font size="2">示例</font></h2>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+复制下表中的示例数据，然后将其粘贴进新的 <b>ET</b> 工作表的 A1 单元格中。要使公式显示结果，请选中它们，按 F2，然后按 
+Enter。如果需要，可调整列宽以查看所有数据。</p>
+<table id="table1" class="banded" xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<thead>
+		<tr>
+			<th align="left"><b class="ocpLegacyBold">公式</b></th>
+			<th align="left"><b class="ocpLegacyBold">&nbsp;说明</b></th>
+			<th align="left"><b class="ocpLegacyBold">&nbsp;实时结果</b></th>
+		</tr>
+	</thead>
+	<tr>
+		<td align="left"><font size="2">=NORM.S.INV(0.908789)</font></td>
+		<td align="left"><font size="2">&nbsp;正态分布概率为 0.908789 时，标准正态累积分布函数的反函数值</font></td>
+		<td align="left"><font size="2">&nbsp;1.3333347</font></td>
+	</tr>
+</table>
+</section></article>
+
+<p>　</p>
+<p><b>相关功能</b></p>
+<p><a href="functionlist_stat.htm">统计函数</a></p>
+
+
+
+</body>
+
+</html>

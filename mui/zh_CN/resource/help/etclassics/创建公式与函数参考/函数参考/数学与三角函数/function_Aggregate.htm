@@ -1,0 +1,348 @@
+<html>
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>AGGREGATE</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="AGGREGATE">
+  <param name="Keyword" value="函数">
+</object>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<h1>
+<font face="宋体" size="3">
+<span style="display: inline !important; float: none; color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+AGGREGATE</span></font></h1>
+<p style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">返回列表或数据库中的合计。 </font></p>
+<p style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">AGGREGATE 函数可将不同的聚合函数应用于列表或数据库，并提供忽略隐藏行和错误值的选项。</font></p>
+<h2 style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">语法</font></h2>
+<p style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">
+引用形式</font></p>
+<p style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">
+AGGREGATE(function_num, options, ref1, [ref2], …)</font></p>
+<p style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">
+数组形式</font></p>
+<p style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">
+AGGREGATE(function_num, options, array, [k])</font></p>
+<p style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+　</p>
+<p style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">AGGREGATE 函数语法具有以下参数：</font></p>
+<ul style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+	<li><font face="宋体" size="2"><b>Function_num</b> 必需。 一个介于 1 到 19 之间的数字，指定要使用的函数。</font></li>
+</ul>
+<ul style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+	<table width="243">
+		<thead>
+			<tr>
+				<th width="202" class="th1"><font face="宋体">Function_num</font></th>
+				<th class="th2"><font face="宋体">函数</font></th>
+			</tr>
+		</thead>
+		<tr>
+			<td class="ll"><font face="宋体">1</font></td>
+			<td class="ll"><font face="宋体">AVERAGE</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">2</font></td>
+			<td class="ll"><font face="宋体">COUNT</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">3</font></td>
+			<td class="ll"><font face="宋体">COUNTA</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">4</font></td>
+			<td class="ll"><font face="宋体">MAX</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">5</font></td>
+			<td class="ll"><font face="宋体">MIN</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">6</font></td>
+			<td class="ll"><font face="宋体">PRODUCT</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">7</font></td>
+			<td class="ll"><font face="宋体">STDEV.S</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">8</font></td>
+			<td class="ll"><font face="宋体">STDEV.P</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">9</font></td>
+			<td class="ll"><font face="宋体">SUM</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">10</font></td>
+			<td class="ll"><font face="宋体">VAR.S</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">11</font></td>
+			<td class="ll"><font face="宋体">VAR.P</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">12</font></td>
+			<td class="ll"><font face="宋体">MEDIAN</font></td>
+		</tr>
+		<tr>
+			<td class="ll" height="20"><font face="宋体">13</font></td>
+			<td class="ll" height="20"><font face="宋体">MODE.SNGL</font></td>
+		</tr>
+		<tr>
+			<td class="ll" height="18"><font face="宋体">14</font></td>
+			<td class="ll" height="18"><font face="宋体">LARGE</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">15</font></td>
+			<td class="ll"><font face="宋体">SMALL</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">16</font></td>
+			<td class="ll"><font face="宋体">PERCENTILE.INC</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">17</font></td>
+			<td class="ll"><font face="宋体">QUARTILE.INC</font></td>
+		</tr>
+		<tr>
+			<td class="ll" height="18"><font face="宋体">18</font></td>
+			<td class="ll" height="18"><font face="宋体">PERCENTILE.EXC</font></td>
+		</tr>
+		<tr>
+			<td class="ll" height="20"><font face="宋体">19</font></td>
+			<td class="ll" height="20"><font face="宋体">QUARTILE.EXC</font></td>
+		</tr>
+	</table>
+</ul>
+<ul style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+	<li><font face="宋体" size="2"><b>Options</b> 必需。 一个数值，决定在函数的计算区域内要忽略哪些值。</font></li>
+</ul>
+<h1><span style="font-weight: 400"><font face="宋体" size="2">&nbsp;&nbsp;
+<span style="background-color: #C0C0C0">&nbsp;注意:&nbsp;如果数组参数中包含计算（例如，=AGGREGATE(14,3,A1:A100*(A1:A100&gt;0),1)），则函数不会忽略隐藏行、嵌套分类汇总或嵌套聚合</span></font></span></h1>
+<ul style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+	<table width="488">
+		<thead>
+			<tr>
+				<th width="93" class="th1"><font face="宋体">选项</font></th>
+				<th class="th2"><font face="宋体">行为</font></th>
+			</tr>
+		</thead>
+		<tr>
+			<td class="ll"><font face="宋体">0 或省略</font></td>
+			<td class="ll"><font face="宋体">忽略嵌套 SUBTOTAL 和 AGGREGATE 函数</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">1</font></td>
+			<td class="ll"><font face="宋体">忽略隐藏行、嵌套 SUBTOTAL 和 AGGREGATE 函数</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">2</font></td>
+			<td class="ll"><font face="宋体">忽略错误值、嵌套 SUBTOTAL 和 AGGREGATE 函数</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">3</font></td>
+			<td class="ll"><font face="宋体">忽略隐藏行、错误值、嵌套 SUBTOTAL 和 AGGREGATE 函数</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">4</font></td>
+			<td class="ll"><font face="宋体">忽略空值</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">5</font></td>
+			<td class="ll"><font face="宋体">忽略隐藏行</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">6</font></td>
+			<td class="ll"><font face="宋体">忽略错误值</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">7</font></td>
+			<td class="ll"><font face="宋体">忽略隐藏行和错误值</font></td>
+		</tr>
+	</table>
+</ul>
+<ul style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+	<li><font face="宋体"><b><font size="2">Ref1</font></b><font size="2"> 必需。函数的第一个数值参数，这些函数具有要计算聚合值的多个数值参数。</font></font><font size="2"></li>
+	<li></font><font size="2" face="宋体"><b>Ref2,...</b> 可选。要计算聚合值的 2 至 253 个数值参数。</font><p>
+	<font face="宋体">对于使用数组的函数，ref1 
+	可以是一个数组或数组公式，也可以是对要为其计算聚合值的单元格区域的引用。 ref2 是某些函数必需的第二个参数。 以下函数需要 ref2 参数：</font></li>
+</ul>
+<ul style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+	<table>
+		<thead>
+			<tr>
+				<th class="th1"><font face="宋体">函数</font></th>
+			</tr>
+		</thead>
+		<tr>
+			<td class="ll"><font face="宋体">LARGE(array,k)</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">SMALL(array,k)</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">PERCENTILE.INC(array,k)</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">QUARTILE.INC(array,quart)</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">PERCENTILE.EXC(array,k)</font></td>
+		</tr>
+		<tr>
+			<td class="ll"><font face="宋体">QUARTILE.EXC(array,quart)</font></td>
+		</tr>
+	</table>
+</ul>
+<h2 style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">备注</font></h2>
+<p style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">
+<b>Function_num</b> <b>:</b> </font> </p>
+<ul style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+	<li><font face="宋体" size="2">在将 AGGREGATE 函数输入到工作表上的单元格中时，只要键入 function_num 
+	参数，就会立即看到可以作为参数使用的所有函数的列表。</font></li>
+</ul>
+<p style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">错误：</font></p>
+<ul style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+	<li><font size="2" face="宋体">如果第二个引用参数是必需的但未提供，AGGREGATE 将返回 #VALUE! 错误。</font><font size="2"></li>
+	<li></font><font size="2" face="宋体">如果有一个或多个引用是三维引用，AGGREGATE 将返回 #VALUE! 错误值。</font></li>
+</ul>
+<p style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">区域类型：</font></p>
+<ul style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+	<li><font face="宋体" size="2">AGGREGATE 函数适用于数据列或垂直区域， 不适用于数据行或水平区域。 例如，当使用选项 1 对某个水平区域进行分类汇总时，如 
+	AGGREGATE(1, 1, ref1)，则隐藏某一列并不会影响聚合总值。 但是，隐藏垂直区域中的某一行将对聚合总值产生影响。</font></li>
+</ul>
+<h2 style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">示例</font></h2>
+<p style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+<font face="宋体" size="2">复制下表中的示例数据，然后将其粘贴进新的 <b>Et</b> 工作表的 A1 单元格中。要使公式显示结果，请选中它们，按 F2，然后按 
+Enter。如果需要，可调整列宽以查看所有数据。</font></p>
+<table style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+	<thead>
+		<tr>
+			<th class="th1"><font face="宋体">#DIV/0!
+			</font>
+			</th>
+			<th class="th2"><font face="宋体">82</font></th>
+		</tr>
+	</thead>
+	<tr>
+		<td class="ll"><font face="宋体">72</font></td>
+		<td class="ll"><font face="宋体">65</font></td>
+	</tr>
+	<tr>
+		<td class="ll"><font face="宋体">30</font></td>
+		<td class="ll"><font face="宋体">95</font></td>
+	</tr>
+	<tr>
+		<td class="ll"><font face="宋体">#NUM!</font></td>
+		<td class="ll"><font face="宋体">63</font></td>
+	</tr>
+	<tr>
+		<td class="ll"><font face="宋体">31</font></td>
+		<td class="ll"><font face="宋体">53</font></td>
+	</tr>
+	<tr>
+		<td class="ll"><font face="宋体">96</font></td>
+		<td class="ll"><font face="宋体">71</font></td>
+	</tr>
+	<tr>
+		<td class="ll"><font face="宋体">32</font></td>
+		<td class="ll"><font face="宋体">55</font></td>
+	</tr>
+	<tr>
+		<td class="ll"><font face="宋体">81</font></td>
+		<td class="ll"><font face="宋体">83</font></td>
+	</tr>
+	<tr>
+		<td class="ll"><font face="宋体">33</font></td>
+		<td class="ll"><font face="宋体">100</font></td>
+	</tr>
+	<tr>
+		<td class="ll"><font face="宋体">53</font></td>
+		<td class="ll"><font face="宋体">91</font></td>
+	</tr>
+	<tr>
+		<td class="ll"><font face="宋体">34</font></td>
+		<td class="ll"><font face="宋体">89</font></td>
+	</tr>
+</table>
+<p>　</p>
+<table style="color: rgb(0, 0, 0); font-family: Microsoft YaHei; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px; background-color: transparent">
+	<thead>
+		<tr>
+			<th class="th1"><font face="宋体">公式
+			</font>
+			</th>
+			<th class="th2"><font face="宋体">说明</font></th>
+			<th class="th3"><font face="宋体">结果</font></th>
+		</tr>
+	</thead>
+	<tr>
+		<td class="ll"><font face="宋体">=AGGREGATE(4, 6, A1:A11)</font></td>
+		<td class="ll"><font face="宋体">计算最大值，同时忽略区域中的错误值</font></td>
+		<td class="ll"><font face="宋体">96</font></td>
+	</tr>
+	<tr>
+		<td class="ll"><font face="宋体">=AGGREGATE(14, 6, A1:A11, 3)</font></td>
+		<td class="ll"><font face="宋体">计算第 3 个最大值，同时忽略区域中的错误值</font></td>
+		<td class="ll"><font face="宋体">72</font></td>
+	</tr>
+	<tr>
+		<td class="ll"><font face="宋体">=AGGREGATE(15, 6, A1:A11)</font></td>
+		<td class="ll"><font face="宋体">将返回 错误 #NUM!。 因为函数 (SMALL) 要求具有一个第二引用参数，因而 AGGREGATE 
+		需要第二引用参数。</font></td>
+		<td class="ll"><font face="宋体">#VALUE!</font></td>
+	</tr>
+	<tr>
+		<td class="ll"><font face="宋体">=AGGREGATE(12, 6, A1:A11, B1:B11)</font></td>
+		<td class="ll"><font face="宋体">计算中值，同时忽略区域中的错误值</font></td>
+		<td class="ll"><font face="宋体">68</font></td>
+	</tr>
+	<tr>
+		<td class="ll"><font face="宋体">=MAX(A1:A2)</font></td>
+		<td class="ll"><font face="宋体">将返回错误值，因为计算区域中存在错误值。</font></td>
+		<td class="ll"><font face="宋体">#DIV/0!</font></td>
+	</tr>
+</table>
+<p><font face="宋体"><b>相关功能</b></font></p>
+<p><a href="functionlist_Math.htm">数学与三角函数</a></p>
+
+
+
+</body>
+
+</html>

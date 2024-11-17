@@ -1,0 +1,112 @@
+<html>
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>FINV</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="FINV">
+  <param name="Keyword" value="函数">
+</object>
+<style>
+<!--
+td
+{color:#000000;
+font-size:12.0pt;
+font-family:宋体;
+font-weight:400;
+font-style:normal;
+text-decoration:none;
+text-align:general;
+vertical-align:middle;
+
+}-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/logo.gif"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<p><b><font size="3">CHISQ.DIST</font></b></p>
+<p>返回 χ2 分布的左尾概率。</p>
+<p>　</p>
+<p><b class="bterm">语法</b></p>
+<p><b>CHISQ.DIST(x,deg_freedom,cumulative)</b></p>
+<p>x&nbsp;&nbsp; 用来计算分布的数值。</p>
+<p>Deg_freedom&nbsp;&nbsp;&nbsp; 自由度数。</p>
+<p>cumulative&nbsp;&nbsp;&nbsp; 如果 cumulative 为 TRUE，则 CHISQ.DIST 返回累积分布函数；如果为 
+FALSE，则返回概率密度函数。</p>
+<p>　</p>
+<p><b class="bterm">说明</b></p>
+<ul class="cntIndent36" type="disc">
+	<li>如果任意参数是非数值型，则 CHISQ.DIST 返回 #VALUE! 错误值。</li>
+	<li>如果 x 为负数，则 CHISQ.DIST 返回 #NUM! 错误值。</li>
+	<li>如果 deg_freedom 不是整数，则将被截尾取整。</li>
+	<li>如果 deg_freedom &lt; 1 或 deg_freedom &gt; 10^10，则 CHISQ.DIST 返回 #NUM! 错误值。 
+	</li>
+</ul>
+<p>　</p>
+<p><b class="bterm">示例</b></p>
+<p>如果您将示例复制到空白工作表中，可能会更易于理解该示例。</p>
+
+<table width="721" id="table1">
+	<tr>
+		<th class="thEmpty" width="10" style="border-style: solid; border-width: 1px"></th>
+	    <th class="th1" width="181" style="border-style: solid; border-width: 1px"><font face="宋体">A</font></th>
+	    <th class="th1" width="501" style="border-style: solid; border-width: 1px"><font face="宋体">B</font></th>
+	</tr>
+	<tr>
+		<td class="tdSeqence" style="border-style: solid; border-width: 1px"><font face="宋体">1</font></td>
+		<td class = "th1" width="181" style="border-style: solid; border-width: 1px; background-color: #FFFFFF">
+		<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt">
+		<font face="宋体">数据</font></td>
+		<td class = "th1" width="501" style="border-style: solid; border-width: 1px; background-color: #FFFFFF"><b class="bterm"><font size="2">说明</font></b></td>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="10" style="border-style: solid; border-width: 1px"><font face="宋体">2</font></td>
+		<td class="ll" width="181" style="border-style: solid; border-width: 1px">
+		<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt">
+		=CHISQ.DIST(0.5,1,TRUE)</p>
+		</td>
+		<td class="ll" width="501" style="border-style: solid; border-width: 1px">
+		<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt">作为累积分布函数返回的 χ2 
+		分布概率为 0.5，其自由度为 1(0.520499878)</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="10" style="border-style: solid; border-width: 1px"><font face="宋体">3</font></td>
+		<td class="ll" width="181" style="border-style: solid; border-width: 1px">
+		<font size="2">=CHISQ.DIST(0.5,1,FALSE)</font></td>
+		<td class="ll" width="501" style="border-style: solid; border-width: 1px">
+		<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt">作为概率密度函数返回的 χ2 
+		分布概率为 0.5，其自由度为 1(0.439391289467722)</p>
+		</td>
+	</tr>
+	    	
+</table>
+
+<p>　</p>
+<p><b>相关功能</b></p>
+<p><a href="functionlist_stat.htm">统计函数</a></p>
+
+
+
+</body>
+
+</html>

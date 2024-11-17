@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport"
+        content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <meta charset="UTF-8">
+  <title>WPS 页面错误</title>
+  <style>
+    body, html {
+      background-color: #f7f7f7;
+      overflow-x: hidden;
+      font-family: "Microsoft YaHei", "微软雅黑";
+      min-width: 300px;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wps-error-page {
+      padding-top: 140px;
+      width: 360px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .wps-error-page-icon {
+      margin: 0 auto;
+      width: 160px;
+      height: 160px;
+      display: block;
+      background: url('./error.png') center center no-repeat;
+    }
+
+    .wps-error-page-desc {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      color: #808080;
+      font-size: 14px;
+    }
+
+    .wps-error-page-refresh {
+      width: 120px;
+      margin: 0 auto;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      font-size: 14px;
+      color: #ffffff;
+      background-color: #4586d8;
+      cursor: pointer;
+      border-radius: 1.6px;
+    }
+
+    .wps-error-page-refresh:hover {
+      background-color: #5f9ce9;
+    }
+
+    .wps-error-page-refresh:active {
+      background-color: #3e7dcd;
+    }
+  </style>
+</head>
+<body>
+<div class="wps-error-page">
+  <i class="wps-error-page-icon"></i>
+  <p class="wps-error-page-desc">网络异常，请检查网络后刷新</p>
+  <div class="wps-error-page-refresh" onclick="refresh();">重新加载</div>
+</div>
+</body>
+<script>
+
+  document.onselectstart = function (e) {
+    return false;
+  };
+
+  document.oncontextmenu = function (e) {
+    e.returnValue = false;
+  };
+
+  document.ondragstart = function (e) {
+    return false;
+  };
+
+  window.refresh = function () {
+    exec('jsReloadCef');
+  };
+
+  function exec(method) {
+
+    var str = JSON.stringify({
+      method: method
+    });
+
+    if (typeof clientAPI !== 'undefined' && clientAPI.fromJSAsynCall) {
+      clientAPI.fromJSAsynCall(str);
+      return;
+    }
+
+    window.cefQuery({
+      request: "jsAsynCall('" + str + "')",
+      persistent: false
+    });
+  }
+</script>
+</html>

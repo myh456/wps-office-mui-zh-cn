@@ -1,0 +1,195 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>IF</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="IF">
+  <param name="Keyword" value="函数">
+</object>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+.style2 {
+	font-family: 宋体;
+}
+.style3 {
+	font-family: 宋体;
+	font-size: 10pt;
+}
+.style4 {
+	font-family: "Times New Roman", Times, serif;
+}
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="AutoNumber2">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/Ribbon/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/Ribbon/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<h1>IFS</h1>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp;&nbsp; 
+IFS 函数检查是否满足一个或多个条件，且是否返回与第一个 TRUE 条件对应的值。IFS 可以取代多个嵌套 IF 语句，并且可通过多个条件更轻松地读取。<o:p></o:p></span></p>
+<p><b>语法</b></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp;&nbsp; 
+IFS(logical_test1, value_if_true1, [logical_test2, value_if_true2], 
+[logical_test3, value_if_true3],…)<o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp;&nbsp; 
+logical_test1（必需）&nbsp;&nbsp;&nbsp; 计算结果为 TRUE 或 FALSE 的条件。<o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp;&nbsp; 
+value_if_true1（必需）&nbsp;&nbsp;&nbsp; 当 logical_test1 的计算结果为 TRUE 时要返回结果。可以为空。<o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp;&nbsp; 
+logical_test2…,logical_test127（可选）&nbsp; 计算结果为 TRUE 或 FALSE 的条件。<o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp;&nbsp; 
+value_if_true2…,value_if_true127（可选）&nbsp;&nbsp; 当logical_testN的计算结果为 TRUE 
+时要返回结果。每个value_if_trueN对应于一个条件logical_testN。可以为空。<o:p></o:p></span></p>
+<p><b>说明</b></p>
+<ul>
+	<li>
+	<p class="MsoNormal">
+	<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">
+	IFS 函数允许测试最多 127 个不同的条件。<o:p></o:p></span></p>
+	</li>
+	<li>
+	<p class="MsoNormal">
+	<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">
+	<font face="宋体">例如：</font><o:p></o:p></span></p>
+	</li>
+	<li>
+	<p class="MsoNormal">
+	<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">
+	<font face="宋体">也即如果（</font>A1 等于 1，则显示 1，如果 A1 等于 2，则显示 2，或如果 A1 等于 3，则显示 
+	3）。<o:p></o:p></span></p>
+	</li>
+	<li>
+	<p class="MsoNormal">
+	<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">
+	<font face="宋体">一般不建议对</font> IF 或 IFS 
+	语句使用过多条件，因为需要按正确的顺序输入多个条件，这样一来，构建、测试和更新会变得十分困难。<o:p></o:p></span></p>
+	</li>
+	<li>
+	<p class="MsoNormal">
+	<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">
+	=IFS(A1=1,1,A1=2,2,A1=3,3)<o:p></o:p></span></p>
+	</li>
+</ul>
+<p><b>示例</b></p>
+<p>如果您将示例复制到空白工作表中，可能会更易于理解该示例。</p>
+
+<ul>
+	<li><strong>示例一：</strong></li>
+</ul>
+<p class="style1"><img alt="" src="IFS.png" width="670" height="284"></p>
+<p>&nbsp;</p>
+<ul>
+  <li>
+	<span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style2">
+	单元格 A2:A6 的公式如下：</span></li>
+	<li class="" style="box-sizing: border-box; margin-top: 18px; margin-left: 0px; padding-left: 6px; display: list-item; font-size: 1em;">
+	<p class="style2" style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;">
+	=IFS(A2&gt;89,&quot;A&quot;,A2&gt;79,&quot;B&quot;,A2&gt;69,&quot;C&quot;,A2&gt;59,&quot;D&quot;,TRUE,&quot;F&quot;)</p>
+	</li>
+	<li>
+	<span style="mso-spacerun: 'yes'; font-family: 宋体; mso-font-kerning: 1.0000pt;">
+	<font face="宋体">如果（</font>A2 大于 89，则返回“A”，如果 A2 大于 79，则返回“B”并以此类推，对于所有小于 59 
+	的值，返回“F”）。</span><span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;"><o:p></o:p></span></li>
+	<p class="MsoNormal">&nbsp;</p>
+	<li>示例二：<br>
+	<br>
+	<img alt="" src="ifs2.png" width="540" height="189"></p>
+	</li>
+	<li>
+	<span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style2">
+	单元格 G2 的公式如下：</span></li>
+	<li>
+	<span style="color: rgb(47, 47, 47); font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">
+	=IFS(F2=1,D2,F2=2,D3,F2=3,D4,F2=4,D5,F2=5,D6,F2=6,D7,F2=7,D8)</span></li>
+	<li>
+	<span class="style2" style="box-sizing: border-box; color: rgb(47, 47, 47); font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+	如果（单元格 F2 中的值等于 1，则返回的值位于单元格 D2，如果单元格 F2 中的值等于 2，则返回的值位于单元格 
+	D3，并以此类推，如果其他条件均不满足，则最后返回的值位于 D8）。</span></li>
+</ul>
+<p>
+<span class="style2" style="box-sizing: border-box; color: rgb(47, 47, 47); font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+<strong>备注：</strong></span></p>
+<ul>
+  <li>
+	<span style="color: rgb(47, 47, 47); font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">
+	若</span><span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style2">要指定默认结果，请输入一个对于 
+	logical_test 参数始终为 true 的条件，如 TRUE 或 1=1。如果不满足其他任何条件，则将返回相应值。在示例 1 中，行 6 和行 
+	7（成绩为 58）展示了这一结果。</span></li>
+</ul>
+<ul>
+  <li>
+	<span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style3">
+	如果在没有相应<span class="Apple-converted-space">&nbsp;</span></span><span class="style4" style="box-sizing: border-box; color: rgb(47, 47, 47); font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">value_if_true</span><span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span class="style2">&nbsp;</span></span><span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style3">的情况下提供了</span><span style="color: rgb(47, 47, 47); font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style3">&nbsp;</span><span class="style4" style="box-sizing: border-box; color: rgb(47, 47, 47); font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">logical_test</span><span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span class="style2">&nbsp;</span></span><span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style2">参数，则此函数将显示典型的“你为此函数输入的参数过少”错误消息。</span></li>
+</ul>
+<ul>
+  <li>
+	<span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style3">
+	如果<span class="Apple-converted-space">&nbsp;</span></span><span class="style4" style="box-sizing: border-box; color: rgb(47, 47, 47); font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">logical_test</span><span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span class="style2">&nbsp;</span></span><span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style2">参数经计算解析为 
+	</span>
+	<span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style4">
+	TRUE</span><span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style2"> 
+	或 </span>
+	<span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style4">
+	FALSE</span><span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style2"> 
+	以外的值，则此函数将返回 #VALUE! 错误。</span></li>
+</ul>
+<ul>
+  <li>
+	<span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style2">
+	如果找不到 </span>
+	<span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style4">
+	TRUE</span><span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style2"> 
+	条件，则此函数将返回 </span>
+	<span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style4">
+	#N/A!</span><span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style2">错误。</span></li>
+</ul>
+<p><b>相关功能</b></p>
+<p><a href="functionlist_logcial.htm">逻辑函数</a></p>
+<p><a href="function_Iferror.htm">IFERROR</a></p>
+<p><a href="function_Not.htm">NOT</a></p>
+<p><a href="function_and.htm">AND</a></p>
+<p><a href="function_or.htm">OR</a></p>
+<p><a href="function_True.htm">TRUE</a></p>
+<p><a href="function_false.htm">FALSE</a></p>
+<p>　</p>
+
+
+
+</body>
+
+</html>

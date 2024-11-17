@@ -1,0 +1,142 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>COUNTIFS</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="table3">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<section class="ocpArticleTitleSection" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+<h1><font size="3">VAR.P</font></h1>
+</section><article id="ocpArticleContent" class="ocpArticleContent" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><section class="ocpIntroduction">
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<font size="2">计算基于整个样本总体的方差（忽略样本总体中的逻辑值和文本）。</font></p>
+</section><section class="ocpSection">
+<p><b><font size="2">语法</font></b></p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<font size="2">VAR.P(number1,[number2],...)</font></p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<font size="2">VAR.P 函数语法具有下列参数：</font></p>
+<ul xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<li><b class="ocpRunInHead"><font size="2">Number1</font></b><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;必需。对应于总体的第一个数值参数。</font></li>
+	<li><b class="ocpRunInHead"><font size="2">Number2, ...</font></b><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;可选。对应于总体的 
+	2 到 254 个数值参数。</font></li>
+</ul>
+</section><section class="ocpSection">
+<p><b><font size="2">说明</font></b></p>
+<ul xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<li><font size="2">VAR.P 假定其参数是整个总体。如果数据代表总体样本，请使用 VAR.S 计算方差。</font></li>
+	<li><font size="2">参数可以是数字或者是包含数字的名称、数组或引用。</font></li>
+	<li><font size="2">逻辑值和直接键入到参数列表中代表数字的文本被计算在内。</font></li>
+	<li><font size="2">如果参数是一个数组或引用，则只计算其中的数字。数组或引用中的空白单元格、逻辑值、文本或错误值将被忽略。</font></li>
+	<li><font size="2">如果参数为错误值或为不能转换为数字的文本，将会导致错误。</font></li>
+	<li><font size="2">如果要使计算包含引用中的逻辑值和代表数字的文本，请使用 VARPA 函数。</font></li>
+	<li><font size="2">函数 VAR.P 的计算公式如下：</font><p><font size="2">
+	<img src="https://support.content.office.net/zh-cn/media/56446cf3-73bc-4723-8708-93412198ed4b.gif" alt="公式"></font></p>
+	<p><font size="2">其中 x 为样本平均值 AVERAGE(number1,number2,…)，n 为样本大小。</font></li>
+</ul>
+</section><section class="ocpSection">
+<p><b><font size="2">示例</font></b></p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<font size="2">复制下表中的示例数据，然后将其粘贴进新的<b> ET </b>工作表的 A1 单元格中。要使公式显示结果，请选中它们，按 
+F2，然后按 Enter。如果需要，可调整列宽以查看所有数据。</font></p>
+<table id="table2" class="banded" xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<thead>
+		<tr>
+			<th align="left"><b class="ocpLegacyBold"><font size="2">强度</font></b></th>
+			<td align="left">　</td>
+			<td>　</td>
+		</tr>
+	</thead>
+	<tr>
+		<td align="left"><font size="2">1,345</font></td>
+		<td align="left">　</td>
+		<td>　</td>
+	</tr>
+	<tr>
+		<td align="left"><font size="2">1,301</font></td>
+		<td align="left">　</td>
+		<td>　</td>
+	</tr>
+	<tr>
+		<td align="left"><font size="2">1,368</font></td>
+		<td align="left">　</td>
+		<td>　</td>
+	</tr>
+	<tr>
+		<td align="left"><font size="2">1,322</font></td>
+		<td align="left">　</td>
+		<td>　</td>
+	</tr>
+	<tr>
+		<td align="left"><font size="2">1,310</font></td>
+		<td align="left">　</td>
+		<td>　</td>
+	</tr>
+	<tr>
+		<td align="left"><font size="2">1,370</font></td>
+		<td align="left">　</td>
+		<td>　</td>
+	</tr>
+	<tr>
+		<td align="left"><font size="2">1,318</font></td>
+		<td align="left">　</td>
+		<td>　</td>
+	</tr>
+	<tr>
+		<td align="left"><font size="2">1,350</font></td>
+		<td align="left">　</td>
+		<td>　</td>
+	</tr>
+	<tr>
+		<td align="left"><font size="2">1,303</font></td>
+		<td align="left">　</td>
+		<td>　</td>
+	</tr>
+	<tr>
+		<td align="left"><font size="2">1,299</font></td>
+		<td align="left">　</td>
+		<td>　</td>
+	</tr>
+	<tr>
+		<td><b class="ocpLegacyBold"><font size="2">公式</font></b></td>
+		<td><b class="ocpLegacyBold"><font size="2">说明</font></b></td>
+		<td><b class="ocpLegacyBold"><font size="2">结果</font></b></td>
+	</tr>
+	<tr>
+		<td><font size="2">=VAR.P(A2:A11)</font></td>
+		<td><font size="2">假定只生产了 10 个工具的情况下，所有工具断裂强度的方差（使用样本总体）。</font></td>
+		<td><font size="2">678.84</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">=VAR.S(A2:A11)</font></td>
+		<td><font size="2">使用 VAR.S 函数算出的方差（假定仅对一个总体样本进行了测验）。结果与 VAR.P 不相等。</font></td>
+		<td><font size="2">754.27</font></td>
+	</tr>
+</table>
+</section></article>
+<p>　</p>
+
+
+
+
+<p><b><font size="2">相关功能</font></b></p>
+<p><a href="functionlist_stat.htm"><font size="2">统计函数</font></a></p>
+
+
+
+</body>
+
+</html>

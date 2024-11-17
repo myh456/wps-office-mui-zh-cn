@@ -1,0 +1,101 @@
+<html>
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>FINV</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="FINV">
+  <param name="Keyword" value="函数">
+</object>
+<style>
+<!--
+td
+{color:#000000;
+font-size:12.0pt;
+font-family:宋体;
+font-weight:400;
+font-style:normal;
+text-decoration:none;
+text-align:general;
+vertical-align:middle;
+
+}-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/logo.gif"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<p><b><font size="3">CHISQ.INV</font></b></p>
+<p>返回 χ2 分布的左尾概率的反函数值。</p>
+<p>　</p>
+<p><b>语法</b></p>
+<p><b>CHISQ.INV(probability,deg_freedom)</b></p>
+<p>Probability&nbsp;&nbsp; 与 χ2 分布相关联的概率。</p>
+<p>Deg_freedom&nbsp;&nbsp; 自由度数。</p>
+<p>　</p>
+<p><b class="bterm">说明</b></p>
+<ul class="cntIndent36" type="disc">
+	<li>如果参数是非数值型，则 CHISQ.INV 返回 #VALUE! 错误值。</li>
+	<li>如果 probability &lt; 0 或 probability &gt; 1，则 CHISQ.INV.RT 返回 #NUM! 错误值。</li>
+	<li>如果 deg_freedom 不是整数，则将被截尾取整。</li>
+	<li>如果 deg_freedom &lt; 1 或 deg_freedom &gt; 10^10，则 CHISQ.INV 返回 #NUM! 错误值。</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p><b class="bterm">示例</b></p>
+<p>如果您将示例复制到空白工作表中，可能会更易于理解该示例。</p>
+
+<table width="596" id="table1">
+	<tr>
+		<th class="thEmpty" width="10" style="border-style: solid; border-width: 1px"></th>
+	    <th class="th1" width="130" style="border-style: solid; border-width: 1px"><font face="宋体">A</font></th>
+	    <th class="th1" width="433" style="border-style: solid; border-width: 1px"><font face="宋体">B</font></th>
+	</tr>
+	<tr>
+		<td class="tdSeqence" style="border-style: solid; border-width: 1px"><font face="宋体">1</font></td>
+		<td class = "th1" width="130" style="border-style: solid; border-width: 1px; background-color: #FFFFFF">
+		<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt">
+		公式</td>
+		<td class = "th1" width="433" style="border-style: solid; border-width: 1px; background-color: #FFFFFF">
+		说明（结果）</td>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="10" style="border-style: solid; border-width: 1px"><font face="宋体">2</font></td>
+		<td class="ll" width="130" style="border-style: solid; border-width: 1px">
+		<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt">
+		=CHISQ.INV(0.5,1)</p>
+		</td>
+		<td class="ll" width="433" style="border-style: solid; border-width: 1px">
+		<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt">使用自由度 1 算出 χ2 
+		分布左尾概率 0.93的反函数值(0.454936423）</p>
+		</td>
+	</tr>
+	    	
+</table>
+
+<p>　</p>
+<p><b>相关功能</b></p>
+<p><a href="functionlist_stat.htm">统计函数</a></p>
+
+
+
+</body>
+
+</html>

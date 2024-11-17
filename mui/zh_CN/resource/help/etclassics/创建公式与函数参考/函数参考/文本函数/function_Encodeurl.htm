@@ -1,0 +1,171 @@
+<html>
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>REPLACEB</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="REPLACEB">
+  <param name="Keyword" value="函数">
+</object>
+<style>
+<!--
+td
+{color:#000000;
+font-size:12.0pt;
+font-family:宋体;
+font-weight:400;
+font-style:normal;
+text-decoration:none;
+text-align:general;
+vertical-align:middle;
+
+}.et2
+{color:#000000;
+font-size:12.0pt;
+font-family:宋体;
+font-weight:400;
+font-style:normal;
+text-decoration:none;
+text-align:general;
+vertical-align:middle;
+
+}-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<section class="ocpArticleTitleSection">
+<h1>ENCODEURL</h1>
+</section><article id="ocpArticleContent" class="ocpArticleContent"><section class="ocpIntroduction">
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<font face="宋体">本文介绍 ENCODEURL 函数的公式语法和用法。</font></p>
+</section><section class="ocpSection">
+<h2><font face="宋体" size="2">说明</font></h2>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<font face="宋体">返回 URL 编码的字符串。</font></p>
+</section><section class="ocpSection">
+<h2><font face="宋体" size="2">语法</font></h2>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<font face="宋体">ENCODEURL(text)</font></p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<font face="宋体">ENCODEURL 函数语法具有下列参数。</font></p>
+<ul xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<li><font face="宋体"><b class="ocpRunInHead">Text</b>&nbsp;&nbsp;&nbsp; 要进行 URL 编码的字符串。</li>
+</ul>
+</section><section class="ocpSection"></font>
+<h2><font face="宋体" size="2">示例</font></h2>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<font face="宋体">复制下表中的示例数据，然后将其粘贴进新的 <b>ET </b>工作表的 A1 单元格中。要使公式显示结果，请选中它们，按 
+F2，然后按 Enter。如果需要，可调整列宽以查看所有数据。</font></p>
+<table id="table1" class="banded" xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<thead>
+		<tr>
+			<th width="378"><font face="宋体"><b class="ocpLegacyBold">XML 响应：</b></font></th>
+			<th width="307"><font face="宋体"><b class="ocpLegacyBold">邮政编码：</b></font></th>
+			<td width="316">　</td>
+		</tr>
+	</thead>
+	<tr>
+		<td width="378"><font size="2">=WEBSERVICE(&quot;http://xml.weather.yahoo.com/forecastrss/&quot;&amp;ENCODEURL(B2)&amp;&quot;_f.xml&quot;)</font></td>
+		<td width="307"><font size="2">98052</font></td>
+		<td width="316">　</td>
+	</tr>
+	<tr>
+		<td width="378">　</td>
+		<td width="307">　</td>
+		<td width="316">　</td>
+	</tr>
+	<tr>
+		<td width="378">　</td>
+		<td width="307">　</td>
+		<td width="316">　</td>
+	</tr>
+	<tr>
+		<td width="378">　</td>
+		<td width="307">　</td>
+		<td width="316">　</td>
+	</tr>
+	<tr>
+		<td width="378" align="right"><b class="ocpLegacyBold"><font size="2">
+		地点：</font></b></td>
+		<td width="307"><font size="2">=FILTERXML(A2,&quot;//yweather:location/@city&quot;)</font></td>
+		<td width="316"><font size="2">=FILTERXML(A2,&quot;//yweather:location/@region&quot;)</font></td>
+	</tr>
+	<tr>
+		<td width="378" align="right"><b class="ocpLegacyBold"><font size="2">
+		当前天气情况：</font></b></td>
+		<td width="307"><font size="2">=FILTERXML(A2,&quot;//yweather:condition/@temp&quot;)</font></td>
+		<td width="316"><font size="2">=FILTERXML(A2,&quot;//yweather:condition/@text&quot;)</font></td>
+	</tr>
+	<tr>
+		<td width="378" align="right">　</td>
+		<td width="307">　</td>
+		<td width="316">　</td>
+	</tr>
+	<tr>
+		<td width="378" align="right"><b class="ocpLegacyBold"><font size="2">
+		趋势预测：</font></b></td>
+		<td width="307"><font size="2">=FILTERXML(A2,&quot;//yweather:forecast/@day&quot;)</font></td>
+		<td width="316"><font size="2">=FILTERXML(A2,&quot;//yweather:forecast/@text&quot;)</font></td>
+	</tr>
+	<tr>
+		<td width="378">　</td>
+		<td width="307"><font size="2">=FILTERXML(A2,&quot;//yweather:forecast/@day&quot;)</font></td>
+		<td width="316"><font size="2">=FILTERXML(A2,&quot;//yweather:forecast/@text&quot;)</font></td>
+	</tr>
+	<tr>
+		<td width="378">　</td>
+		<td width="307"><font size="2">=FILTERXML(A2,&quot;//yweather:forecast/@day&quot;)</font></td>
+		<td width="316"><font size="2">=FILTERXML(A2,&quot;//yweather:forecast/@text&quot;)</font></td>
+	</tr>
+	<tr>
+		<td width="378">　</td>
+		<td width="307"><font size="2">=FILTERXML(A2,&quot;//yweather:forecast/@day&quot;)</font></td>
+		<td width="316"><font size="2">=FILTERXML(A2,&quot;//yweather:forecast/@text&quot;)</font></td>
+	</tr>
+	<tr>
+		<td width="378">　</td>
+		<td width="307"><font size="2">=FILTERXML(A2,&quot;//yweather:forecast/@day&quot;)</font></td>
+		<td width="316"><font size="2">=FILTERXML(A2,&quot;//yweather:forecast/@text&quot;)</font></td>
+	</tr>
+	<tr>
+		<td width="378"><b class="ocpLegacyBold"><font size="2">说明</font></b></td>
+		<td width="307">　</td>
+		<td width="316">　</td>
+	</tr>
+	<tr>
+		<td style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;" width="378">
+		<font size="2">本示例使用 ENCODEURL 函数将单元格 B2 中的邮政编码作为参数传递到 A2 的 Web 查询中。 
+		FILTERXML 函数被用于 Web 查询中，可返回单元格 B6:C13 中邮政编码所对应的城市和状态信息，以及当前和预测的天气情况。</font></td>
+		<td style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;" width="307">　</td>
+		<caption><font face="宋体" size="2"><br class="Apple-interchange-newline">
+　</font></caption>
+	</tr>
+</table>
+<p><b>相关功能</b></p>
+<p><a href="functionlist_text.htm">文本函数</a></p>
+
+
+
+</body>
+
+</html>

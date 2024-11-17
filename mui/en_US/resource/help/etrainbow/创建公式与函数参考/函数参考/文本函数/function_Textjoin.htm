@@ -1,0 +1,116 @@
+<html>
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>SEARCH</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="SEARCH">
+  <param name="Keyword" value="函数">
+</object>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<h1>TEXTJOIN</h1>
+<p>&nbsp; 将多个区域和/或字符串的文本组合起来，并在要组合的各文本值之间插入指定的分隔符。</p>
+<p>　</p>
+<p><b>语法</b></p>
+<p><b>TEXTJOIN(delimiter, ignore_empty, text1…)</b></p>
+<p>delimiter&nbsp; 分隔符。文本字符串，或者为空，或用双引号引起来的一个或多个字符，或对有效文本字符串的引用。如果提供一个数字，则将被视为文本。</p>
+<p>ignore_empty&nbsp;&nbsp; 如果为 TRUE，则忽略空白单元格。</p>
+<p>text1…&nbsp;&nbsp;&nbsp; 为 1 到 253 个要联接的文本项。这些文本项可以是文本字符串或字符串数组，如单元格区域。</p>
+<p>　</p>
+<p><b>说明</b></p>
+<ul>
+  <li>如果结果字符串超过 32767 个字符（单元格限制），则 TEXTJOIN 返回 #VALUE! 错误。</li>
+</ul>
+<p>　</p>
+<p><b>示例</b></p>
+<p>如果您将示例复制到空白工作表中，可能会更易于理解该示例。</p>
+
+<table width="93">
+	<tr>
+		<th class="thEmpty" width="18" style="border-style: solid; border-width: 1px"></th>
+	    <th class="th1" width="61" style="border-style: solid; border-width: 1px">
+		<p style="text-align: center">A</th>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="18" style="border-style: solid; border-width: 1px"><b>1</b></td>
+		<td class = "th1" width="61" style="text-align: center; border-style: solid; border-width: 1px; background-color: #FFFFFF">
+		<span style="font-weight: 400">W</span></td>
+	</tr>
+	<tr>
+		<td class="tdSeqence" width="18" style="border-style: solid; border-width: 1px"><b>2</b></td>
+		<td class ="ll" width="61" style="text-align: center; border-style: solid; border-width: 1px">
+		P</td>
+	</tr>
+		<tr>
+		<td class="tdSeqence" width="18" style="border-style: solid; border-width: 1px">3</td>
+		<td class ="ll" width="61" style="text-align: center; border-style: solid; border-width: 1px">
+		S</td>
+	</tr>
+
+	<tr>
+		<td class="tdSeqence" width="18" style="border-style: solid; border-width: 1px">4</td>
+		<td class ="ll" width="61" style="text-align: center; border-style: solid; border-width: 1px">
+		办公</td>
+	</tr>
+				
+
+	</table>
+	</br>
+	<table width="596">
+	<tr>
+	    <th class="th1" width="184" style="border-style: solid; border-width: 1px"><b>公式</b></th>
+   	    <th class="th2" width="374" style="border-style: solid; border-width: 1px"><b>说明（结果）</b></th>
+	</tr>
+		<tr>
+		<td class ="ll" width="184" valign="top" style="border-style: solid; border-width: 1px">
+		=TEXTJOIN(&quot; &quot;,TRUE,A1:A4)</td>
+		<td class ="ll" width="374" style="border-style: solid; border-width: 1px">
+		将上述数据之间插入空格然后合并为一个字符串（<b>w p s</b> 办公）</td>
+	</tr>
+	<tr>
+		<th class="thEmpty" width="20"></th>
+	</tr>
+	<tr>
+		<th class="thEmpty" width="20"></th>
+	</tr>
+	</table>
+
+
+
+<p>
+<p>　</p>
+<p><b>相关功能</b></p>
+<p>
+<p><a href="functionlist_text.htm">文本函数</a></p>
+<p><a href="function_Substitute.htm">SUBSTITUTE</a></p>
+<p><a href="function_Replace.htm">REPLACE</a></p>
+<p><a href="function_Mid.htm">MID</a></p>
+</p>
+<p>　</p>
+
+
+
+</body>
+
+</html>

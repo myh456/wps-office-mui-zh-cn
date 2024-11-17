@@ -1,0 +1,115 @@
+<html>
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>DAY</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="DAY">
+  <param name="Keyword" value="函数">
+</object>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="table2">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<h1>DAYS</h1>
+<section class="ocpArticleTitleSection" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"></section><article id="ocpArticleContent" class="ocpArticleContent" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><section class="ocpIntroduction"></section><section class="ocpSection">
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+返回两个日期之间的天数。</p>
+</section><section class="ocpSection">
+<h2><font size="2">语法</font></h2>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+DAYS(end_date, start_date)</p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+DAYS 函数语法具有以下参数。</p>
+<ul xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<li><b class="ocpRunInHead">End_date</b>&nbsp;&nbsp;&nbsp;&nbsp; 必需。 Start_date 和 End_date 
+	是用于计算期间天数的起止日期。</li>
+	<li><b class="ocpRunInHead">Start_date</b>&nbsp;&nbsp;&nbsp; 必需。Start_date 和 End_date 
+	是用于计算期间天数的起止日期。</li>
+</ul>
+<div class="ocpAlert" xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<p class="ocpAlertSection"><b class="ocpNote">注意:</b>&nbsp;Excel 
+	可将日期存储为序列号，以便可以在计算中使用它们。 默认情况下，1900 年 1 月 1 日的序列号是 1，而 2008 年 1 月 1 日的序列号是 
+	39448，这是因为它距 1900 年 1 月 1 日有 39447 天。</div>
+</section><section class="ocpSection">
+<p><b><font size="2">说明</font></b></p>
+<ul xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<li>如果两个日期参数为数字，DAYS 使用 EndDate–StartDate 计算两个日期之间的天数。</li>
+	<li>如果任何一个日期参数为文本，该参数将被视为 DATEVALUE(date_text) 并返回整型日期，而不是时间组件。</li>
+	<li>如果日期参数是超出有效日期范围的数值，DAYS 返回 #NUM! 错误值。</li>
+	<li>如果日期参数是无法解析为字符串的有效日期，DAYS 返回 #VALUE! 错误值。</li>
+</ul>
+</section><section class="ocpSection">
+<p><b><font size="2">示例</font></b></p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+复制下表中的示例数据，然后将其粘贴进新的 <b>ET </b>工作表的 A1 单元格中。要使公式显示结果，请选中它们，按 F2，然后按 
+Enter。如果需要，可调整列宽以查看所有数据。</p>
+<table id="table1" class="banded" xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<thead>
+		<tr>
+			<th>
+			<p align="left"><b class="ocpLegacyBold">数据</b></th>
+			<td>　</td>
+			<td>　</td>
+		</tr>
+	</thead>
+	<tr>
+		<td>2011-12-31</td>
+		<td>　</td>
+		<td>　</td>
+	</tr>
+	<tr>
+		<td>2011-1-1<p>　</td>
+		<td>　</td>
+		<td>　</td>
+	</tr>
+	<tr>
+		<td><b class="ocpLegacyBold">公式</b></td>
+		<td><b class="ocpLegacyBold">说明</b></td>
+		<td><b class="ocpLegacyBold">结果</b></td>
+	</tr>
+	<tr>
+		<td>=DAYS(&quot;2011-3-15&quot;,&quot;2011-2-1&quot;)</td>
+		<td>查找结束日期 (2011-3-15) 和结束日期 (2011-2-1) 之间的天数。 当直接在函数中输入日期时，您需要将其用引号引起。 
+		结果等于 42。</td>
+		<td>42</td>
+	</tr>
+	<tr>
+		<td>=DAYS(A2,A3)</td>
+		<td>查找 A2 中的结束日期和 A3 中的开始日期之间的天数 (364)。</td>
+		<td>364</td>
+	</tr>
+</table>
+</section></article>
+
+<p>
+
+<Br>
+
+</p>
+<p><b>相关功能</b></p>
+<p><a href="functionlist_datetime.htm">日期与时间函数</a></p>
+
+
+
+</body>
+
+</html>

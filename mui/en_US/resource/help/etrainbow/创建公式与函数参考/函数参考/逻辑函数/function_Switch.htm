@@ -1,0 +1,164 @@
+<html>
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>AND</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="AND">
+  <param name="Keyword" value="函数">
+</object>
+<style type="text/css">
+.style1 {
+	bgcolor: #C0C0C0;
+	text-align: left;
+	height: 19px;
+	line-height: 120%;
+	white-space: sWrap;
+	font-bord: true;
+	font-weight: bold;
+	border: medium none #c0c0c0;
+	background-color: #C0C0C0;
+	background-position: left 50%;
+}
+.style2 {
+	border-left: medium none #c0c0c0;
+	border-right: medium none #c0c0c0;
+	border-top: medium none #c0c0c0;
+	background-color: #C0C0C0;
+	bgcolor: #C0C0C0;
+	font-size: 10pt;
+	bordercolor: #C0C0C0;
+	border-bottom: 1px solid #C0C0C0;
+	text-align: center;
+	line-height: 120%;
+	font-bord : true;
+	font-weight: bold;
+}
+.style3 {
+	bgcolor: #C0C0C0;
+	text-align: left;
+	height: 19px;
+	line-height: 120%;
+	white-space: sWrap;
+	font-bord: true;
+	font-weight: bold;
+	border: medium none #c0c0c0;
+	background-color: #FFFFFF;
+	background-position: left 50%;
+}
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="table1">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<h1>SWITCH</h1>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp; 
+SWITCH 函数计算一个值 (称为<font face="宋体">表达式</font>)对列表中的值，并返回第一个匹配值所对应的结果。如果没有匹配项，则可能返回的可选默认值。<o:p></o:p></span></p>
+<p><b>语法</b></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">
+<font face="宋体">&nbsp;&nbsp;</font></span>SWITCH<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">(表达式、 value1、 result1、 [默认值或值 
+2，result2]，...[默认或 value3，result3]）<o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">
+<font face="宋体">&nbsp; 表达式</font> <font face="宋体">（必需）</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font face="宋体">表达式是值</font> <font face="宋体">（如数字、</font> <font face="宋体">
+日期或文本），将比较</font> value1...value126。<o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">
+<font face="宋体">&nbsp; 值</font> 1...value126 &nbsp;&nbsp;&nbsp; &nbsp;ValueN是一个将与表达式进行比较的值。<o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp; 
+result1...result126&nbsp;&nbsp;&nbsp;ResultN是在相应的valueN参数与表达式匹配时要返回的值。ResultN ，而且必须为每个相应的valueN参数提供。<o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">
+<font face="宋体">&nbsp; 默认</font> <font face="宋体">（可选）</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font face="宋体">&nbsp;默认值为</font>valueN表达式中没有匹配的情况下返回的值。有没有相应的resultN表达式标识默认参数 
+（请参见示例）。默认值必须是最后一个参数的函数中。<o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">
+<font face="宋体">&nbsp; 因为功能仅限于</font> 254 参数，您可以使用参数值和结果达 126 的对。<o:p></o:p></span></p>
+<p><b>示例</b></p>
+<p>如果您将示例复制到空白工作表中，可能会更易于理解该示例。<br>
+</p>
+<table style="width: 740px">
+	<tr>
+		<th style="width: 32px; height: 27px"></th>
+		<th class="style1" style="width: 49px; height: 27px;">A</th>
+		<th class="style1" style="width: 474px; height: 27px;">B</th>
+		<th class="style1" style="height: 27px">C</th>
+	</tr>
+	<tr>
+		<td class="style2" style="height: 21px; width: 32px;"><b>1</b></td>
+		<td class = "style3" style="height: 21px; width: 49px">值</td>
+		<td class = "style3" style="height: 21px; width: 474px">公式</td>
+		<td class = "style3" style="height: 21px">说明（结果）</td>
+	</tr>
+	<tr>
+		<td class="style2" style="width: 32px; height: 38px"><b>2</b></td>
+		<td class ="ll" style="width: 49px; height: 38px;">2</td>
+		<td class ="ll" style="width: 474px; height: 38px;">=SWITCH（工作日 (A2) 
+		1，&quot;星期日&quot;2、&quot;星期一&quot;，3，&quot;星期二&quot;，&quot;不匹配&quot;）</td>
+		<td class ="ll" style="height: 38px">因为 A2 = 2，星期一是结果参数对应的值为 2，SWITCH返回星期一</td>
+	</tr>
+	<tr>
+		<td class="style2" style="width: 32px">3</td>
+		<td class ="ll" style="width: 49px">100</td>
+		<td class ="ll" style="width: 474px">
+		=SWITCH(A3,1,&quot;Sunday&quot;,2,&quot;Monday&quot;,3,&quot;Tuesday&quot;)</td>
+		<td class ="ll">由于没有任何匹配项和任何其他参数，SWITCH将返回 #N/A ！</td>
+	</tr>
+	<tr>
+		<td class="style2" style="height: 35px; width: 32px;">4</td>
+		<td class ="ll" style="height: 35px; width: 49px">100</td>
+		<td class ="ll" style="height: 35px; width: 474px">
+		=SWITCH(A4,1,&quot;Sunday&quot;,2,&quot;Monday&quot;,3,&quot;Tuesday&quot;,&quot;No match&quot;)</td>
+		<td class ="ll" style="height: 35px">无匹配项</td>
+	</tr>
+	<tr>
+		<td class="style2" style="height: 33px; width: 32px;">5</td>
+		<td class ="ll" style="height: 33px; width: 49px">2</td>
+		<td class ="ll" style="height: 33px; width: 474px">
+		=SWITCH(A5,1,&quot;Sunday&quot;,7,&quot;Saturday&quot;,&quot;weekday&quot;)</td>
+		<td class ="ll" style="height: 33px">工作日</td>
+	</tr>
+	<tr>
+		<td class="style2" style="height: 33px; width: 32px;">6</td>
+		<td class ="ll" style="height: 33px; width: 49px">2</td>
+		<td class ="ll" style="height: 33px; width: 474px">
+		=SWITCH(A6,1,&quot;Sunday&quot;,2,&quot;Monday&quot;,3,&quot;Tuesday&quot;,&quot;No match&quot;)</td>
+		<td class ="ll" style="height: 33px">（星期一)</td>
+	</tr>
+</table>
+<p><b>相关功能</b></p>
+<p><a href="functionlist_logcial.htm">逻辑函数</a></p>
+<p><a href="function_Not.htm">NOT</a></p>
+<p><a href="function_or.htm">OR</a></p>
+<p><a href="function_True.htm">TRUE</a></p>
+<p><a href="function_false.htm">FALSE</a></p>
+<p>　</p>
+
+
+
+</body>
+
+</html>

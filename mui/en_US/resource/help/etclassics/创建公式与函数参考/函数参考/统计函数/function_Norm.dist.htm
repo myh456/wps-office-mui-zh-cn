@@ -1,0 +1,139 @@
+<html>
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>NORMDIST</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="NORMDIST">
+  <param name="Keyword" value="函数">
+</object>
+<style>
+<!--
+td
+{color:#000000;
+font-size:12.0pt;
+font-family:宋体;
+font-weight:400;
+font-style:normal;
+text-decoration:none;
+text-align:general;
+vertical-align:middle;
+
+}.et7
+{color:#000000;
+font-size:12.0pt;
+font-family:宋体;
+font-weight:400;
+font-style:normal;
+text-decoration:none;
+text-align:general;
+vertical-align:middle;
+
+}-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<section class="ocpArticleTitleSection" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">
+<h1><font size="3">NORM.DIST</font></h1>
+</section><article id="ocpArticleContent" class="ocpArticleContent" style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><section class="ocpIntroduction">
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<font face="宋体">返回指定平均值和标准偏差的正态分布函数。 此函数在统计方面应用范围广泛（包括假设检验）。</font></p>
+</section><section class="ocpSection">
+<p><b><font face="宋体" size="2">语法</font></b></p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<font face="宋体">NORM.DIST(x,mean,standard_dev,cumulative)</font></p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<font face="宋体">NORM.DIST 函数语法具有下列参数：</font></p>
+<ul xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<li><font face="宋体"><b class="ocpRunInHead">X</b>&nbsp;&nbsp;&nbsp;&nbsp;必需。 需要计算其分布的数值。</font></li>
+	<li><font face="宋体"><b class="ocpRunInHead">Mean</b>&nbsp;&nbsp;&nbsp;&nbsp;必需。 分布的算术平均值。</font></li>
+	<li><font face="宋体"><b class="ocpRunInHead">standard_dev</b>&nbsp;&nbsp;&nbsp;&nbsp;必需。 分布的标准偏差。</font></li>
+	<li><font face="宋体"><b class="ocpRunInHead">累计</b>&nbsp;&nbsp;&nbsp; 必备.确定函数形式的逻辑值。如果累积性为 
+	TRUE, 则为 &quot;标准&quot;。DIST 返回累积分布函数;如果为 FALSE, 则返回概率密度函数。</font></li>
+</ul>
+</section><section class="ocpSection">
+<p><b><font face="宋体">说明</font></b></p>
+<ul xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<li><font face="宋体">如果 mean 或 standard_dev 是非数值的，则 NORM.DIST 返回 错误值 #VALUE!。</font></li>
+	<li><font face="宋体">如果 standard_dev ≤ 0，则 NORM.DIST 返回 错误值 #NUM!。</font></li>
+	<li><font face="宋体">如果 mean = 0，standard_dev = 1，且 cumulative = TRUE，则 
+	NORM.DIST 返回标准正态分布，即 NORM.S.DIST。</font></li>
+	<li><font face="宋体">正态分布密度函数 (cumulative = FALSE) 的公式为：</font><p>
+	<font face="宋体">
+	<img src="https://support.content.office.net/zh-cn/media/607ce265-e4fe-4296-bfd1-3e6873b06f22.gif" alt="公式"></font></li>
+	<li><font face="宋体">如果 cumulative = TRUE，则公式为从负无穷大到公式中已知的 X 的积分。</font></li>
+</ul>
+</section><section class="ocpSection">
+<p><b><font face="宋体" size="2">示例</font></b></p>
+<p xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+<font face="宋体">复制下表中的示例数据，然后将其粘贴进新的 <b>ET </b>工作表的 A1 单元格中。要使公式显示结果，请选中它们，按 F2，然后按 
+Enter。如果需要，可调整列宽以查看所有数据。</font></p>
+<table id="table1" class="banded" xmlns:antixss="urn:AntiXSSExtensions" xmlns:friendlytitlelookup="urn:FriendlyTitleLookup">
+	<thead>
+		<tr>
+			<th>
+			<p align="left"><font face="宋体"><b class="ocpLegacyBold">数据</b></font></th>
+			<th>
+			<p align="left"><font face="宋体"><b class="ocpLegacyBold">说明</b></font></th>
+			<td>　</td>
+		</tr>
+	</thead>
+	<tr>
+		<td><font size="2">42</font></td>
+		<td><font size="2">需要计算其分布的数值</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">40</font></td>
+		<td><font size="2">分布的算术平均值</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">1.5</font></td>
+		<td><font size="2">分布的标准偏差</font></td>
+	</tr>
+	<tr>
+		<td align="left">　<p><b class="ocpLegacyBold"><font size="2">公式</font></b></td>
+		<td align="left">　<p><b class="ocpLegacyBold"><font size="2">说明</font></b></td>
+		<td align="left">　<p><b class="ocpLegacyBold"><font size="2">结果</font></b></td>
+	</tr>
+	<tr>
+		<td height="16"><font size="2">=NORM.DIST(A2,A3,A4,TRUE)</font></td>
+		<td height="16"><font size="2">在上述条件下的累积分布函数值</font></td>
+		<td height="16"><font size="2">0.9087888</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">=NORM.DIST(A2,A3,A4,FALSE)</font></td>
+		<td><font size="2">在上述条件下的概率密度函数值</font></td>
+		<td><font size="2">0.10934</font></td>
+	</tr>
+</table>
+</section></article>
+
+<p>　</p>
+<p><b>相关功能</b></p>
+<p><a href="functionlist_stat.htm">统计函数</a></p>
+
+
+
+</body>
+
+</html>

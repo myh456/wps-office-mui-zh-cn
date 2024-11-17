@@ -1,0 +1,941 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<script src="../../../css/help.js" >
+</script>
+<head>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../css/styleOfTable.css" type="text/css">
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+<title>AVEDEV</title>
+<object type="application/x-oleobject" classid="clsid:1e2gbd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="Keyword" value="AVEDEV">
+  <param name="Keyword" value="函数">
+</object>
+<style type="text/css">
+.style1 {
+	font-family: 宋体;
+}
+.style2 {
+	font-family: 宋体;
+	font-size: 10pt;
+}
+.style3 {
+	color: rgb(54, 54, 54);
+}
+.style4 {
+	font-family: 宋体;
+	text-align: center;
+}
+.style5 {
+	text-align: center;
+}
+.style7 {
+	background-color: #C0C0C0;
+}
+.style8 {
+	font-family: 宋体;
+	background-color: #C0C0C0;
+}
+.style9 {
+	font-family: 宋体;
+	color: rgb(47, 47, 47);
+	text-align: center;
+}
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; position: absolute; left: 0; top: 0; margin: 0" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="50%">
+    <img border="0" src="../../../images/Ribbon/title1.gif" width="312" height="69"></td>
+    <td width="50%">
+    <p align="right">
+    <img border="0" src="../../../images/Ribbon/logo.gif" width="120" height="26"></td>
+  </tr>
+</table>
+<p>　</p>
+<p>　</p>
+<h1 class="style1">MINIFS</h1>
+
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp; 
+MINIFS 函数返回一组给定条件或标准指定的单元格之间的最小值。<o:p></o:p></span></p>
+<p><b>语法</b></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp; 
+MINIFS(min_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)<o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp; 
+min_range （必需）&nbsp;<font face="宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+确定最小值的实际单元格区域。</font><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp; 
+criteria_range1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+（必需）是一组用于条件计算的单元格。<o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp; 
+criteria1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+（必需）用于确定哪些单元格是最小值的条件，格式为数字、表达式或文本。一组相同的条件适用于 </span>
+<span style="mso-spacerun: 'yes'; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;" class="style1">
+MAXIFSSUMIFS</span><span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;"> 
+和 AVERAGEIFS 函数。<o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="mso-spacerun: 'yes'; font-family: 宋体; font-size: 10.0000pt; mso-font-kerning: 1.0000pt;">&nbsp; 
+criteria_range2,criteria2,...<font face="宋体"> （可选）附加区域及其关联条件。最多可以输入</font> 126 
+个区域/条件对。<o:p></o:p></span></p>
+<p><strong>备注</strong></p>
+<p class="p0" style="border-bottom: medium none; margin-left: 18.0000pt; margin-top: 0pt; margin-bottom: 0pt; padding-left: 0pt; padding-right: 0pt; padding-top: 0pt; padding-bottom: 6pt">
+<span style="color: rgb(47, 47, 47); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);" class="style1">
+min_range 和 criteria_rangeN 参数的大小和形状必须相同，否则这些函数会返回 #VALUE! 错误。</span></p>
+
+<p><b>示例</b></p>
+<p>&nbsp; 如果您将示例复制到空白工作表中，可能会更易于理解该示例。　</p>
+<ul>
+	<li><b>示例1<table id="tblID0EKACAAA" class="banded flipColors" style="border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; width: 119px; margin-top: 10px; padding: 0px; line-height: normal; color: rgb(54, 54, 54); font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+		<thead style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; text-transform: none; background-color: rgb(192, 192, 192)">
+				<td class="style4" style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				等级</b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				数值</b></p>
+				</td>
+			</tr>
+		</thead>
+		<tbody style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				89</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				93</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				2</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				96</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				2</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				85</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				3</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				91</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				88</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+			</tr>
+			</table>
+	<table id="tblID0EKACAAA" class="banded flipColors" style="border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; width: 551px; margin-top: 10px; padding: 0px; line-height: normal; color: rgb(54, 54, 54); font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+		<tbody style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 115px;" class="style8">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px; font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				公式</b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style7">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px; font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				结果</b></p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 115px;" class="style1">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				=MINIFS(A2:A7,B2:B7,1)</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				88</p>
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style2">
+				在 criteria_range1 中，单元格 B2、B6 和 B7 符合条件 1。在 min_range 
+				中的对应单元格中，A7 的值最小。因此，结果是 88。</p>
+				</td>
+			</tr>
+	</table>
+	</b></li>
+</ul>
+<ul>
+	<li><b>示例2<table id="tblID0EIACAAA" class="banded flipColors" style="border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; width: 110px; margin-top: 10px; padding: 0px; line-height: normal; color: rgb(54, 54, 54); font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+		<thead style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; text-transform: none; background-color: rgb(192, 192, 192)">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b>
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				数值</b></b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				等级</b></p>
+				</td>
+			</tr>
+		</thead>
+		<tbody style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				10</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				B</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				11</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				A</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				100</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				A</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				111</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				B</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				A</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				A</p>
+				</td>
+			</tr>
+			</table>
+	<table id="tblID0EIACAAA" class="banded flipColors" style="border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; width: 576px; margin-top: 10px; padding: 0px; line-height: normal; color: rgb(54, 54, 54); font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+		<tbody style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 133px;" class="style8">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px; font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				公式</b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style7">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px; font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				结果</b></p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 133px;" class="style1">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				=MINIFS(A2:A5,B3:B6,&quot;a&quot;)</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				10</p>
+				<div class="ocpAlert" style="box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; background: transparent;">
+					<p class="style3" style="font-size: 12px; box-sizing: border-box; line-height: 18px; padding: 0px; font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;">
+					<b class="style1" style="font-weight: 600; box-sizing: border-box; line-height: 1em; margin: 20px 0px 5px; text-transform: uppercase;">
+					<font size="2">注意:</font></b>&nbsp;<span class="style2">Criteria_range 
+					和 min_range 不对齐，但它们的形状和大小相同。</span></p>
+				</div>
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style2">
+				在 criteria_range1 中，单元格 1、2 和 4 符合条件 a。在 min_range 中的对应单元格中，A2 
+				的值最小。因此，结果是 10。</p>
+				</td>
+			</tr>
+	</table>
+	</b></li>
+</ul>
+<ul>
+	<li><b>示例3<table id="tblID0EGACAAA" class="banded flipColors" style="border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; width: 227px; margin-top: 10px; padding: 0px; line-height: normal; color: rgb(54, 54, 54); font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+		<tbody style="box-sizing: border-box;">
+		<thead style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; text-transform: none; background-color: rgb(192, 192, 192)">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 54px;" class="style4">
+				<p class="style5" style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;">
+				<b>
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				数值</b></b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 50px;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				等级</b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; " class="style5">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				类</b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				级别</b></p>
+				</td>
+			</tr>
+		</thead>
+		<tbody style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 54px;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				10</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 50px;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				B</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; " class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				企业</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				100</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 54px;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				11</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 50px;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				A</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; " class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				技术</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				100</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 54px;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				12</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 50px;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				A</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; " class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				企业</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				200</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 54px;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				13</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 50px;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				B</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; " class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				技术</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				300</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 54px;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				14</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 50px;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				B</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; " class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				技术</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				300</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 54px;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				15</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 50px;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				B</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; " class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				企业</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				400</p>
+				</td>
+			</tr>
+			</table>
+	<table id="tblID0EGACAAA" class="banded flipColors" style="border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; width: 689px; margin-top: 10px; padding: 0px; line-height: normal; color: rgb(54, 54, 54); font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+		<tbody style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 218px;" class="style8">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px; font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				公式</b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; " class="style7">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px; font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				结果</b></p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 218px;" class="style1">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				=MINIFS(A2:A7,B2:B7,&quot;b&quot;,D2:D7,&quot;&gt;100&quot;)</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				13</p>
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style2">
+				在 criteria_range1 中，B2、B5、B6 和 B7 符合条件 b。在 Criteria_range2 
+				中的对应单元格中，D5、D6 和 D7 符合 &gt;100 的条件。最后，在 min_range 中的对应单元格中，D5 
+				的值最小。因此，结果是 13。</p>
+				</td>
+			</tr>
+	</table>
+	<br class="Apple-interchange-newline">
+	</b></li>
+</ul>
+<ul>
+	<li><b>示例4<table id="tblID0EEACAAA" class="banded flipColors" style="border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; width: 224px; margin-top: 10px; padding: 0px; line-height: normal; color: rgb(54, 54, 54); font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+		<tbody style="box-sizing: border-box;">
+		<thead style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; text-transform: none; background-color: rgb(192, 192, 192)">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b>
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				数值</b></b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				等级</b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				类</b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				级别</b></p>
+				</td>
+			</tr>
+		</thead>
+		<tbody style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				10</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				B</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				企业</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				8</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; height: 22px; width: 45px;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px; height: 22px;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				A</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; height: 22px;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				技术</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; height: 22px;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				8</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				100</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				A</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				企业</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				8</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				11</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				B</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				技术</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				0</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				A</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				技术</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				8</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style5">
+				<p style="box-sizing: border-box; line-height: 1.5; padding: 0px;" class="style9">
+				B</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				企业</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				0</p>
+				</td>
+			</tr>
+			</table>
+	<table id="tblID0EEACAAA" class="banded flipColors" style="border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; width: 677px; margin-top: 10px; padding: 0px; line-height: normal; color: rgb(54, 54, 54); font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+		<tbody style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 242px;" class="style8">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px; font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				公式</b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; " class="style7">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px; font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				结果</b></p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 242px;" class="style1">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				=MINIFS(A2:A7,B2:B7,&quot;b&quot;,D2:D7,A8)</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 410px;">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				1</p>
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				criteria2 参数是 A8。但是，因为 A8 为空，它将被视为 0（零）。criteria_range2 中等于 0 
+				的单元格是 D5 和 D7。最后，在 min_range 中的对应单元格中，A7 的值最小。因此，结果是 1。</p>
+				</td>
+			</tr>
+	</table>
+	</b></li>
+</ul>
+<ul>
+	<li><b>示例5<table id="tblID0ECACAAA" class="banded flipColors" style="border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; width: 110px; margin-top: 10px; padding: 0px; line-height: normal; color: rgb(54, 54, 54); font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+		<thead style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; text-transform: none; background-color: rgb(192, 192, 192)">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b>
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				数值</b></b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				等级</b></p>
+				</td>
+			</tr>
+		</thead>
+		<tbody style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				10</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				b</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				a</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				100</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				a</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				b</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				a</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style4">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				a</p>
+				</td>
+			</tr>
+			</table>
+	<table id="tblID0ECACAAA" class="banded flipColors" style="border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; width: 699px; margin-top: 10px; padding: 0px; line-height: normal; color: rgb(54, 54, 54); font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+		<tbody style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style8">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px; font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				公式</b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style7">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px; font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				结果</b></p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style1">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				=MINIFS(A2:A5,B2:C6,&quot;a&quot;)</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				#VALUE!</p>
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style2">
+				由于 min_range 和 criteria_range 的大小和形状不同，MINIFS 返回 #VALUE! 错误。</p>
+				</td>
+			</tr>
+	</table>
+	</b></li>
+</ul>
+<ul>
+	<li><b>示例6<table id="tblID0EAACAAA" class="banded flipColors" style="border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; width: 212px; margin-top: 10px; padding: 0px; line-height: normal; color: rgb(54, 54, 54); font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+		<tbody style="box-sizing: border-box;">
+		<thead style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; text-transform: none; background-color: rgb(192, 192, 192)">
+				<td class="style5" style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b>
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				数值</b></b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				等级</b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				类</b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(57, 57, 57); line-height: 1.5; padding: 0px; font-family: wf_segoe-ui_semibold, 'Segoe UI Semibold', 'Segoe UI', 'Segoe WP', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; font-weight: 400;" class="style5">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				级别</b></p>
+				</td>
+			</tr>
+		</thead>
+		<tbody style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				10</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				b</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				企业</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				100</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				a</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				技术</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				100</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				100</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				a</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				企业</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				200</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				b</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				技术</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				300</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				a</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				技术</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				100</p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 45px;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				1</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				a</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				企业</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style5">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style4">
+				400</p>
+				</td>
+			</tr>
+			</table>
+	<table id="tblID0EAACAAA" class="banded flipColors" style="border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); box-sizing: border-box; border-collapse: collapse; margin-bottom: 20px; width: 446px; margin-top: 10px; padding: 0px; line-height: normal; color: rgb(54, 54, 54); font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+		<tbody style="box-sizing: border-box;">
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(244, 244, 244);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 265px;" class="style7">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px; font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				公式</b></p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;" class="style7">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px; font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;">
+				<b class="style1" style="font-weight: 700; box-sizing: border-box;">
+				结果</b></p>
+				</td>
+			</tr>
+			<tr style="box-sizing: border-box; vertical-align: top; padding: 0px !important; border: 0px !important; background-color: rgb(255, 255, 255);">
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top; width: 265px;">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				=MINIFS(A2:A6,B2:B6,&quot;a&quot;,D2:D6,&quot;&gt;200&quot;)</p>
+				</td>
+				<td style="box-sizing: border-box; padding: 4px 10px 4px 5px; margin: 0px; vertical-align: top;">
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				0</p>
+				<p style="box-sizing: border-box; color: rgb(47, 47, 47); line-height: 1.5; padding: 0px;" class="style1">
+				没有一个单元格符合此条件。</p>
+				</td>
+			</tr>
+	</table>
+	</b></li>
+</ul>
+<p><b>相关功能</b></p>
+<p><a href="functionlist_stat.htm">统计函数</a></p>
+
+
+
+</body>
+
+</html>
